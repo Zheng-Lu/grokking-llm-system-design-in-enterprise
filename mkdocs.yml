@@ -1,0 +1,114 @@
+# Canonical project metadata used by the generated site.
+site_name: Grokking LLM System Design in Enterprise
+site_description: Open case studies on enterprise LLMs, RAG, agents, AI infra, and LLMOps in enterprise settings.
+site_url: https://zheng-lu.github.io/grokking-llm-system-design-in-enterprise/
+repo_url: https://github.com/Zheng-Lu/grokking-llm-system-design-in-enterprise
+repo_name: Zheng-Lu/grokking-llm-system-design-in-enterprise
+edit_uri: edit/main/docs/
+
+# Keep the build strict so broken internal links and malformed pages fail fast in CI.
+docs_dir: docs
+site_dir: site
+strict: true
+
+# The nav mirrors the docs tree so contributors can find and place new content quickly.
+nav:
+  - Home: index.md
+  - About: about.md
+  - Roadmap: roadmap.md
+  - Taxonomy:
+      - LLM Apps: taxonomy/llm-apps.md
+      - RAG: taxonomy/rag.md
+      - Agents: taxonomy/agents.md
+      - AI Infra: taxonomy/ai-infra.md
+      - LLMOps and Evals: taxonomy/llmops-evals.md
+      - Security and Governance: taxonomy/security-governance.md
+  - Patterns:
+      - Permission-Aware RAG: patterns/permission-aware-rag.md
+      - Hybrid Retrieval: patterns/hybrid-retrieval.md
+      - Multi-Agent Orchestration: patterns/multi-agent-orchestration.md
+      - Eval Flywheel: patterns/eval-flywheel.md
+      - LLM Gateway: patterns/llm-gateway.md
+  - Case Studies:
+      - Catalog: case-studies/_index.md
+      - Microsoft Ask Learn: case-studies/microsoft-ask-learn.md
+  - Interview:
+      - Enterprise ChatGPT: interview/enterprise-chatgpt.md
+      - RAG System Design: interview/rag-system-design.md
+  - Contributing:
+      - Style Guide: contributing/style-guide.md
+      - Chapter Template: contributing/chapter-template.md
+      - Review Process: contributing/review-process.md
+
+# Material gives a solid docs/book baseline without custom frontend code.
+theme:
+  name: material
+  language: en
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+    - content.tabs.link
+
+# Search is built in. Mermaid is the only extra plugin to keep diagrams easy to author.
+# The runtime is vendored locally so strict builds do not depend on live CDN checks.
+plugins:
+  - search
+  - mermaid2:
+      javascript: assets/javascripts/mermaid.min.js
+
+# Extensions are chosen for technical writing, clean callouts, diagrams, and copy-paste friendly code.
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+# Keep visual overrides small and local to avoid frontend maintenance overhead.
+extra_css:
+  - assets/stylesheets/extra.css
+
+copyright: Copyright © 2026 Contributors to Grokking LLM System Design in Enterprise

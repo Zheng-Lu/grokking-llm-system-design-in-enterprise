@@ -1,0 +1,38 @@
+name: Case study request
+description: Propose a new public case study chapter for the book.
+title: "[Case Study] "
+labels:
+  - case-study
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Propose a case study that teaches reusable enterprise design lessons and can be backed by public sources.
+  - type: input
+    id: company_system
+    attributes:
+      label: Company or system
+      placeholder: Microsoft Ask Learn
+    validations:
+      required: true
+  - type: textarea
+    id: why_it_matters
+    attributes:
+      label: Why this case matters
+      description: Explain the design problem or pattern this case would teach.
+    validations:
+      required: true
+  - type: textarea
+    id: likely_topics
+    attributes:
+      label: Likely topics
+      description: List the architecture themes involved.
+      placeholder: RAG, permissioning, agent orchestration, evals, cost controls
+  - type: textarea
+    id: sources
+    attributes:
+      label: Public sources
+      description: Link blog posts, talks, papers, engineering docs, or interviews if available.
+    validations:
+      required: true
+

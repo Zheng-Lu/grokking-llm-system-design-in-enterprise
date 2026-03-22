@@ -1,0 +1,38 @@
+name: Feature request
+description: Suggest a meaningful improvement to the book, workflow, or reader experience.
+title: "[Feature] "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Suggest focused improvements. Keep the proposal tied to project goals and maintainability.
+  - type: input
+    id: area
+    attributes:
+      label: Area
+      description: Which part of the project does this affect?
+      placeholder: taxonomy, patterns, contributor workflow, homepage, CI
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What reader or contributor problem does this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Describe the proposed improvement.
+    validations:
+      required: true
+  - type: textarea
+    id: tradeoffs
+    attributes:
+      label: Trade-offs
+      description: What complexity or maintenance cost does this introduce?
+

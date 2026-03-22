@@ -1,0 +1,40 @@
+name: Bug report
+description: Report a broken build, broken docs behavior, or incorrect repository setup.
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for problems with the documentation site, repository tooling, or contributor workflow.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the issue and the expected behavior.
+      placeholder: The docs build fails when...
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: List the steps needed to reproduce the issue.
+      placeholder: |
+        1. Run ...
+        2. Open ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include Python version, operating system, and any other useful context.
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Links, screenshots, or logs that help explain the problem.
+
