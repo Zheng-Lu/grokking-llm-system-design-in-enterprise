@@ -41,4 +41,3 @@ A common shape is:
 - no single trace that explains the end-to-end path
 
 If a workflow can be expressed cleanly with one orchestrator plus deterministic helpers, that is often the better design.
-

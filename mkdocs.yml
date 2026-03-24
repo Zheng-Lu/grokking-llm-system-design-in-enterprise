@@ -1,9 +1,9 @@
 # Canonical project metadata used by the generated site.
-site_name: Grokking LLM System Design in Enterprise
-site_description: Open case studies on enterprise LLMs, RAG, agents, AI infra, and LLMOps in enterprise settings.
+site_name: Grokking LLM System Design
+site_description: Reader-first technical book on RAG, agents, evaluation, LLMOps, and governance.
 site_url: https://zheng-lu.github.io/grokking-llm-system-design-in-enterprise/
 repo_url: https://github.com/Zheng-Lu/grokking-llm-system-design-in-enterprise
-repo_name: Zheng-Lu/grokking-llm-system-design-in-enterprise
+repo_name: GitHub
 edit_uri: edit/main/docs/
 
 # Keep the build strict so broken internal links and malformed pages fail fast in CI.
@@ -11,30 +11,40 @@ docs_dir: docs
 site_dir: site
 strict: true
 
-# The nav mirrors the docs tree so contributors can find and place new content quickly.
+# The sidebar catalogue follows the book's major sections so the structure stays readable and easy to extend.
 nav:
   - Home: index.md
-  - About: about.md
-  - Roadmap: roadmap.md
-  - Taxonomy:
-      - LLM Apps: taxonomy/llm-apps.md
-      - RAG: taxonomy/rag.md
-      - Agents: taxonomy/agents.md
-      - AI Infra: taxonomy/ai-infra.md
-      - LLMOps and Evals: taxonomy/llmops-evals.md
-      - Security and Governance: taxonomy/security-governance.md
-  - Patterns:
-      - Permission-Aware RAG: patterns/permission-aware-rag.md
-      - Hybrid Retrieval: patterns/hybrid-retrieval.md
-      - Multi-Agent Orchestration: patterns/multi-agent-orchestration.md
-      - Eval Flywheel: patterns/eval-flywheel.md
-      - LLM Gateway: patterns/llm-gateway.md
+  - Introduction:
+      - introduction/index.md
+      - introduction/about.md
+      - introduction/roadmap.md
+  - RAG Systems:
+      - rag-systems/index.md
+      - rag-systems/foundations.md
+      - rag-systems/permission-aware-rag.md
+      - rag-systems/hybrid-retrieval.md
+      - rag-systems/design-prompt.md
+  - Agent Systems:
+      - agent-systems/index.md
+      - agent-systems/foundations.md
+      - agent-systems/multi-agent-orchestration.md
+  - Evaluation:
+      - evaluation/index.md
+      - evaluation/foundations.md
+      - evaluation/eval-flywheel.md
+  - LLMOps and Production:
+      - llmops-production/index.md
+      - llmops-production/enterprise-llm-apps.md
+      - llmops-production/ai-infra.md
+      - llmops-production/llm-gateway.md
+      - llmops-production/enterprise-assistant-design-prompt.md
+  - Security, Safety, and Governance:
+      - security-safety-governance/index.md
+      - security-safety-governance/foundations.md
+      - security-safety-governance/safety-controls.md
   - Case Studies:
-      - Catalog: case-studies/_index.md
-      - Microsoft Ask Learn: case-studies/microsoft-ask-learn.md
-  - Interview:
-      - Enterprise ChatGPT: interview/enterprise-chatgpt.md
-      - RAG System Design: interview/rag-system-design.md
+      - case-studies/index.md
+      - case-studies/microsoft-ask-learn.md
   - Contributing:
       - Style Guide: contributing/style-guide.md
       - Chapter Template: contributing/chapter-template.md
@@ -53,27 +63,26 @@ theme:
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: white
-      accent: indigo
+      accent: teal
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
-      accent: indigo
+      accent: teal
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
   features:
-    - navigation.tabs
+    - navigation.indexes
+    - navigation.expand
     - navigation.sections
     - navigation.top
     - toc.follow
     - search.suggest
     - search.highlight
     - content.code.copy
-    - content.action.edit
-    - content.tabs.link
 
 # Search is built in. Mermaid is the only extra plugin to keep diagrams easy to author.
 # The runtime is vendored locally so strict builds do not depend on live CDN checks.
@@ -111,4 +120,4 @@ markdown_extensions:
 extra_css:
   - assets/stylesheets/extra.css
 
-copyright: Copyright © 2026 Contributors to Grokking LLM System Design in Enterprise
+copyright: Copyright © 2026 Contributors to Grokking LLM System Design

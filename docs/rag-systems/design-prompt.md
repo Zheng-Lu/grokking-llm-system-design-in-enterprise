@@ -1,4 +1,4 @@
-# RAG System Design
+# Design Prompt: RAG System
 
 This prompt narrows the focus to retrieval quality, grounding, and data operations.
 
@@ -52,4 +52,3 @@ flowchart LR
 - no discussion of document updates or deletions
 - no evaluation plan beyond user thumbs up or down
 - no answer citations
-

@@ -1,4 +1,4 @@
-# Security and Governance
+# Security, Safety, and Governance Foundations
 
 Security and governance are not bolt-on controls for enterprise LLM systems. They shape the architecture from the start because the system handles data, automation, and probabilistic behavior at the same time.
 
@@ -37,4 +37,3 @@ Security and governance are not bolt-on controls for enterprise LLM systems. The
 ## A practical stance
 
 Good governance should make dangerous changes harder and safe iteration easier. If the process only slows teams down without improving control or visibility, the design is incomplete.
-

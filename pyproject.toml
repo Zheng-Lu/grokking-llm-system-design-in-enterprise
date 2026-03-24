@@ -1,5 +1,5 @@
 [project]
-name = "grokking-llm-system-design-in-enterprise"
+name = "grokking-llm-system-design"
 version = "0.1.0"
 description = "Open case studies on enterprise LLMs, RAG, agents, AI infra, and LLMOps."
 readme = "README.md"

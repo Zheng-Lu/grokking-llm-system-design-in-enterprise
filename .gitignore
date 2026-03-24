@@ -13,4 +13,5 @@ build/
 *.pyc
 *.pyo
 *.pyd
+AGENTS.md
 

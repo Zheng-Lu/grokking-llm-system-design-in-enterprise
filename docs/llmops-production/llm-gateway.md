@@ -47,4 +47,3 @@ That fragmentation slows teams down and weakens governance.
 - routing logic is opaque and hard to debug
 - cache behavior hides regressions
 - policy enforcement diverges from application expectations
-

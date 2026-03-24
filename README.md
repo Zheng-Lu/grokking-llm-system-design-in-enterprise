@@ -1,17 +1,27 @@
-# Grokking LLM System Design in Enterprise
+# Grokking LLM System Design
 
 Open case studies on enterprise LLMs, RAG, agents, AI infra, and LLMOps.
 
-This repository hosts a concise, contributor-friendly, open-source book on how real teams design, operate, and govern LLM systems in enterprise settings. The focus is practical system design: architecture choices, trade-offs, failure modes, evaluation loops, security boundaries, and reusable patterns that show up across serious production deployments.
+This repository is an open technical book about how teams design, operate, and govern LLM systems in enterprise settings. It is organized as a reader-first handbook with sections for RAG, agent systems, evaluation, LLMOps, production, and governance.
 
 ## Why this project exists
 
-There is plenty of LLM content that is either too shallow, too vendor-specific, or too focused on demos. This project aims to be different:
+Most LLM writing is either too shallow, too vendor-specific, or too focused on demos. This project takes a narrower approach:
 
-- grounded in public case studies and technical write-ups
-- optimized for readers who want reusable design patterns, not hype
-- structured to work both as a book and as interview prep
-- easy for outside contributors to extend with Markdown-first workflows
+- ground the book in public case studies and technical write-ups
+- focus on reusable patterns instead of hype
+- keep the structure useful for both reading and system design practice
+- make contribution easy through Markdown-first workflows
+
+## Book structure
+
+- Introduction
+- RAG Systems
+- Agent Systems
+- Evaluation
+- LLMOps and Production
+- Security, Safety, and Governance
+- Case Studies
 
 ## Screenshot
 
@@ -58,10 +68,10 @@ The deployment workflow is configured for `main` and `master` so it works during
 
 ## Contribution invitation
 
-Contributions are welcome across:
+Useful contributions include:
 
 - new case studies backed by public sources
-- taxonomy and pattern chapters
+- handbook chapters across the main section folders
 - diagrams that clarify architecture or trade-offs
 - editorial improvements that reduce ambiguity or verbosity
 
@@ -73,7 +83,7 @@ Start with [CONTRIBUTING.md](CONTRIBUTING.md), then review the docs style guidan
 - Near term: add high-quality case studies from major enterprise deployments and tighten the interview track
 - Long term: turn the repository into a dependable reference for enterprise LLM system design
 
-See [docs/roadmap.md](docs/roadmap.md) for the detailed roadmap.
+See [docs/introduction/roadmap.md](docs/introduction/roadmap.md) for the detailed roadmap.
 
 ## License
 

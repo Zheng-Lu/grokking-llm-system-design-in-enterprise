@@ -1,4 +1,4 @@
-# LLM Apps
+# Enterprise LLM Apps
 
 Enterprise LLM applications are the user-facing layer of the stack: assistants, copilots, search companions, drafting tools, summarizers, workflow helpers, and domain-specific operators.
 
@@ -45,4 +45,3 @@ The app layer is where technical quality meets user trust. A system can have str
 - Which tasks should remain deterministic?
 - When should the system retrieve, ask, act, or escalate?
 - What would make a user trust or distrust the app after one week of use?
-

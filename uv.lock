@@ -179,7 +179,7 @@ wheels = [
 ]
 
 [[package]]
-name = "grokking-llm-system-design-in-enterprise"
+name = "grokking-llm-system-design"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [

@@ -1,4 +1,4 @@
-# RAG
+# RAG Foundations
 
 Retrieval-augmented generation is the default pattern for enterprise knowledge use because raw model memory is rarely enough. The real system design work is not "adding a vector database." It is making retrieval reliable under real document, identity, and freshness constraints.
 
@@ -44,4 +44,3 @@ A good RAG system has to decide what to ingest, how to normalize it, how to segm
 - where permissions are enforced
 - how citations or evidence are surfaced
 - how quality is measured over time
-

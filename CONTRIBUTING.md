@@ -1,8 +1,16 @@
 # Contributing
 
-Thanks for contributing to **Grokking LLM System Design in Enterprise**.
+Thanks for contributing to **Grokking LLM System Design**.
 
 The project is intentionally simple: Markdown content, MkDocs Material for presentation, GitHub Actions for validation and deployment, and a lightweight review process focused on clarity and evidence.
+
+## Working principles
+
+- keep prose concise, technical, and evidence-driven
+- keep changes small and reviewable
+- prefer Markdown and Mermaid over custom frontend work
+- separate sourced fact from editorial inference
+- update `mkdocs.yml` and the relevant section `index.md` pages when navigation should change
 
 ## Local setup
 
@@ -41,13 +49,13 @@ Before writing a full chapter, make sure the topic has:
 
 - use lowercase kebab-case
 - keep filenames short and descriptive
-- group related pages under the existing section folders
+- place new chapters in the section folder they logically belong to
 
 Examples:
 
 - `docs/case-studies/microsoft-ask-learn.md`
-- `docs/patterns/permission-aware-rag.md`
-- `docs/taxonomy/llmops-evals.md`
+- `docs/rag-systems/permission-aware-rag.md`
+- `docs/evaluation/foundations.md`
 
 ## Structure a case study
 
@@ -65,6 +73,10 @@ Case studies should follow the chapter template in `docs/contributing/chapter-te
 10. sources
 
 Keep the distinction between sourced facts and editorial inference explicit.
+
+When adding a new case study, update `docs/case-studies/index.md` if the new chapter changes how readers browse the section.
+
+When adding a non-case-study chapter, update the relevant section landing page such as `docs/rag-systems/index.md` or `docs/llmops-production/index.md`.
 
 ## Submit diagrams
 

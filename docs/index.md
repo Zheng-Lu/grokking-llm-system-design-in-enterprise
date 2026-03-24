@@ -5,92 +5,81 @@ hide:
 
 <div class="home-hero" markdown>
 
+<div class="home-hero-grid" markdown>
+
+<div markdown>
+
 <div class="book-metadata">
-<span>Open-source book</span>
-<span>Enterprise LLM systems</span>
-<span>Markdown-first</span>
+<span>Open-source technical book</span>
+<span>Sidebar-first handbook</span>
+<span>Community-ready</span>
 </div>
 
-# Grokking LLM System Design in Enterprise
+# Grokking LLM System Design
 
-_Open case studies on enterprise LLMs, RAG, agents, AI infra, and LLMOps._
+_A reader-first handbook for RAG, agents, evaluation, production, and governance._
 
-This project turns public engineering material into a practical book about how serious teams build LLM systems under enterprise constraints: messy data, permission boundaries, reliability requirements, evaluation pressure, cost limits, and governance overhead.
+This project turns public technical material into a clean, maintainable book for engineers and platform teams working on enterprise LLM systems. The emphasis is on architecture, trade-offs, failure modes, and production reality, not product gloss.
 
-[Read the vision](about.md){ .md-button .md-button--primary }
-[Browse the roadmap](roadmap.md){ .md-button }
-[Contribute a chapter](contributing/chapter-template.md){ .md-button }
+[Start Reading](introduction/index.md){ .md-button .md-button--primary }
+[GitHub](https://github.com/Zheng-Lu/grokking-llm-system-design-in-enterprise){ .md-button }
 
 </div>
 
-## What the book covers
+<div class="hero-aside" markdown>
+
+**Catalogue**
+
+- [Introduction](introduction/index.md)
+- [RAG Systems](rag-systems/index.md)
+- [Agent Systems](agent-systems/index.md)
+- [Evaluation](evaluation/index.md)
+- [LLMOps and Production](llmops-production/index.md)
+- [Security, Safety, and Governance](security-safety-governance/index.md)
+
+</div>
+
+</div>
+
+</div>
+
+## Who this book is for
+
+- engineers designing enterprise LLM systems under real constraints
+- AI platform teams standardizing infrastructure, evaluation, and governance
+- senior reviewers who want crisp architecture chapters instead of scattered notes
+- contributors who need a structure that scales as the book grows
+
+## Why this structure works
 
 <div class="grid cards" markdown>
 
-- :material-application-braces-outline: **LLM applications**
+- :material-format-list-bulleted-square: **Sidebar-first catalogue**
 
-  System design for copilots, internal assistants, workflow automation, and task-specific interfaces.
+  The left sidebar is the main table of contents, organized as a handbook instead of a marketing site.
 
-- :material-database-search-outline: **Retrieval-augmented generation**
+- :material-book-open-variant-outline: **Reusable chapters**
 
-  Chunking, indexing, retrieval quality, freshness, permission filters, and grounding strategies.
+  Each section mixes foundations, design patterns, and prompts so readers can move from concept to system design.
 
-- :material-robot-outline: **AI agents**
+- :material-source-branch: **Contributor-friendly structure**
 
-  Tool use, planning, orchestration, escalation, and where agentic systems break in production.
-
-- :material-server-outline: **AI infrastructure**
-
-  Gateways, model routing, latency controls, caching, observability, and cost-aware serving.
-
-- :material-chart-timeline-variant: **LLMOps and evals**
-
-  Trace capture, offline and online evaluation, release gates, and feedback loops for iteration.
-
-- :material-shield-check-outline: **Security and governance**
-
-  Data boundaries, access control, prompt injection defense, auditability, and policy enforcement.
+  New chapters fit into a clear section model without adding frontend complexity or extra tooling.
 
 </div>
 
-## Why this project exists
+## Book outline
 
-Most LLM material falls into one of three weak buckets:
+| Section | Focus |
+| --- | --- |
+| [Introduction](introduction/index.md) | Scope, editorial model, and the path through the book |
+| [RAG Systems](rag-systems/index.md) | Retrieval, grounding, permissions, and search quality |
+| [Agent Systems](agent-systems/index.md) | Controlled autonomy, orchestration, and workflow design |
+| [Evaluation](evaluation/index.md) | Quality measurement, release gates, and eval loops |
+| [LLMOps and Production](llmops-production/index.md) | Applications, infra, gateways, and production controls |
+| [Security, Safety, and Governance](security-safety-governance/index.md) | Policy, permissions, auditability, and safety boundaries |
+| [Case Studies](case-studies/index.md) | Public examples that turn patterns into reusable lessons |
 
-- demo-driven content with little operational realism
-- vendor content that hides hard trade-offs
-- fragmented notes that never become reusable design knowledge
+## Editorial stance
 
-This book exists to compress public lessons into clear chapters that answer the same questions repeatedly:
-
-- What problem was the system actually solving?
-- Why did naive approaches fail?
-- Which architectural choices mattered?
-- What were the trade-offs, failure modes, and reusable patterns?
-
-## Who this is for
-
-- engineers designing enterprise LLM systems
-- staff and principal engineers reviewing architecture choices
-- AI platform teams building internal abstractions
-- interview candidates preparing for modern AI system design rounds
-- contributors who want to turn scattered public material into durable technical writing
-
-!!! note "Editorial stance"
-    The project is intentionally technical and concise. It favors architecture, trade-offs, and operational reality over product marketing language.
-
-## How to contribute
-
-Start with the contributor materials:
-
-- [Style guide](contributing/style-guide.md)
-- [Chapter template](contributing/chapter-template.md)
-- [Review process](contributing/review-process.md)
-
-Practical contribution paths:
-
-1. Propose a new case study backed by public sources.
-2. Improve an existing taxonomy or pattern chapter.
-3. Add a diagram that clarifies a design trade-off.
-4. Tighten wording where content is correct but too verbose.
-
+This book stays intentionally compact and technical. It favors architecture, trade-offs, and operational clarity over product language and frontend complexity.

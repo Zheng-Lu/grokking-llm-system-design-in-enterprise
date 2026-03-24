@@ -44,4 +44,3 @@ If permissioning is checked only after retrieval or only in the UI layer, the sy
 - overbroad group membership expansion
 - missing service-account boundaries during ingestion
 - caches that ignore identity
-

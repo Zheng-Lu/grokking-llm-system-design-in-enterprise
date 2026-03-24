@@ -1,4 +1,4 @@
-# Enterprise ChatGPT
+# Design Prompt: Enterprise Assistant
 
 This interview prompt tests whether a candidate can design a general internal assistant without collapsing into hand-wavy "just call an API" answers.
 
@@ -48,4 +48,3 @@ Design an internal enterprise assistant that helps employees answer policy, prod
 - When would you use hybrid retrieval?
 - What metrics would block a release?
 - Which actions, if any, require human approval?
-

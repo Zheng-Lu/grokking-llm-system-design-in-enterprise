@@ -1,4 +1,4 @@
-# AI Infra
+# AI Infrastructure
 
 AI infrastructure is the layer that turns model access into a platform other teams can safely and efficiently build on. In enterprise work, this often matters more than any individual prompt.
 
@@ -43,4 +43,3 @@ That creates drift, inconsistent quality, and poor governance.
 - platform code that hides important provider differences
 - no standard trace format across applications
 - optimization effort before the team can even measure failure
-

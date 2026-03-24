@@ -1,4 +1,4 @@
-# LLMOps and Evals
+# Evaluation Foundations
 
 LLMOps is the practice of turning prompt and model changes into an engineering discipline. Evaluation is the core of that discipline because teams cannot improve what they cannot reliably measure.
 
@@ -42,4 +42,3 @@ A practical eval stack usually has:
 - what the team measured
 - how they closed the loop from failure to dataset
 - which metrics were trusted for release decisions
-

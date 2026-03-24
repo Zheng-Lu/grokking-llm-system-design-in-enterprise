@@ -1,8 +1,8 @@
-# About
+# Why This Book
 
 ## Vision
 
-**Grokking LLM System Design in Enterprise** is an open-source book for readers who want system design guidance that survives contact with production.
+**Grokking LLM System Design** is an open-source book for readers who want system design guidance that survives contact with production.
 
 The project aims to document how enterprise LLM systems are actually shaped by constraints that are easy to ignore in toy examples:
 
@@ -28,13 +28,13 @@ Each chapter should help readers answer not only _what_ a system looked like, bu
 
 ## Editorial model
 
-The repository combines three layers:
+The book is organized as a handbook:
 
-1. **Taxonomy pages** define the problem space.
-2. **Pattern pages** describe reusable architecture moves.
-3. **Case studies** connect public examples to concrete design decisions.
+1. section landing pages define the scope of each topic area
+2. chapter pages explain foundations, design patterns, and trade-offs
+3. case studies connect public examples back to reusable lessons
 
-The interview track then compresses the same ideas into answerable system design prompts.
+Some sections also include design prompts to make the material useful in interview-style settings.
 
 ## What is out of scope
 
@@ -58,4 +58,3 @@ Public case studies are rarely complete. That is fine. Good chapters can still b
 That distinction is a core editorial rule, not a footnote.
 
 [^stability]: Enterprise readers usually need architectures and trade-offs that remain useful after individual model versions change.
-

@@ -33,4 +33,3 @@ Dense retrieval is good at paraphrase and semantic similarity. Sparse retrieval 
 - unstable rank fusion logic
 - weak query analysis that routes everything the same way
 - evaluation that measures answer quality but not retrieval contribution
-
