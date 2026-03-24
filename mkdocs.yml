@@ -1,6 +1,6 @@
 # Canonical project metadata used by the generated site.
 site_name: Grokking LLM System Design
-site_description: Reader-first technical book on RAG, agents, evaluation, LLMOps, and governance.
+site_description: Reader-first technical book on LLM system archetypes, from platform infra to retrieval, agents, model lifecycle, and vertical applications.
 site_url: https://zheng-lu.github.io/grokking-llm-system-design-in-enterprise/
 repo_url: https://github.com/Zheng-Lu/grokking-llm-system-design-in-enterprise
 repo_name: GitHub
@@ -11,40 +11,44 @@ docs_dir: docs
 site_dir: site
 strict: true
 
-# The sidebar catalogue follows the book's major sections so the structure stays readable and easy to extend.
+# The sidebar catalogue follows stable system archetypes so the book grows by section,
+# not as a flat list of disconnected prompts.
 nav:
   - Home: index.md
   - Introduction:
       - introduction/index.md
       - introduction/about.md
       - introduction/roadmap.md
-  - RAG Systems:
-      - rag-systems/index.md
-      - rag-systems/foundations.md
-      - rag-systems/permission-aware-rag.md
-      - rag-systems/hybrid-retrieval.md
-      - rag-systems/design-prompt.md
+  - Foundations of LLM System Design:
+      - foundations/index.md
+      - foundations/system-boundaries.md
+      - foundations/control-surfaces.md
+      - foundations/platform-foundations.md
+      - foundations/retrieval-foundations.md
+      - foundations/agent-foundations.md
+  - Inference and Platform Infra:
+      - inference-platform-infra/index.md
+      - inference-platform-infra/offline-batch-inference-service.md
+      - inference-platform-infra/online-inference-service.md
+      - inference-platform-infra/llm-gateway-proxy.md
+      - inference-platform-infra/evaluation-observability-system.md
+  - Knowledge Retrieval Systems:
+      - knowledge-retrieval-systems/index.md
+      - knowledge-retrieval-systems/internal-chatgpt.md
+      - knowledge-retrieval-systems/domain-specific-q-and-a-bot.md
+      - knowledge-retrieval-systems/notebooklm.md
+      - knowledge-retrieval-systems/microsoft-ask-learn.md
   - Agent Systems:
       - agent-systems/index.md
-      - agent-systems/foundations.md
+      - agent-systems/internal-coding-agent.md
       - agent-systems/multi-agent-orchestration.md
-  - Evaluation:
-      - evaluation/index.md
-      - evaluation/foundations.md
-      - evaluation/eval-flywheel.md
-  - LLMOps and Production:
-      - llmops-production/index.md
-      - llmops-production/enterprise-llm-apps.md
-      - llmops-production/ai-infra.md
-      - llmops-production/llm-gateway.md
-      - llmops-production/enterprise-assistant-design-prompt.md
-  - Security, Safety, and Governance:
-      - security-safety-governance/index.md
-      - security-safety-governance/foundations.md
-      - security-safety-governance/safety-controls.md
-  - Case Studies:
-      - case-studies/index.md
-      - case-studies/microsoft-ask-learn.md
+  - Model Lifecycle:
+      - model-lifecycle/index.md
+      - model-lifecycle/llm-fine-tuning-system.md
+  - Vertical Applications:
+      - vertical-applications/index.md
+      - vertical-applications/application-patterns.md
+      - vertical-applications/ai-shopping-chatbot.md
   - Contributing:
       - Style Guide: contributing/style-guide.md
       - Chapter Template: contributing/chapter-template.md

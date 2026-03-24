@@ -1,6 +1,6 @@
 # Introduction
 
-This book is about enterprise LLM system design under real operating constraints. It focuses on the architectural decisions that determine whether a system stays reliable, governable, and useful after launch.
+This book is about LLM system design under real operating constraints. It is organized by system archetype so readers can move from cross-cutting principles to the designs that appear repeatedly in production.
 
 ## In this section
 
@@ -9,7 +9,6 @@ This book is about enterprise LLM system design under real operating constraints
 
 ## How to read the book
 
-1. Start with the section introductions to understand the problem space.
-2. Move into the design chapters for concrete patterns and trade-offs.
-3. Use the case studies to see how those patterns appear in public systems.
-
+1. Start with [Foundations of LLM System Design](../foundations/index.md) for the common design lenses used across the book.
+2. Move into the section that matches the system you are designing: platform infra, retrieval, agents, model lifecycle, or a vertical application.
+3. Use the case study pages embedded inside the sections to see how public systems map onto the handbook structure.

@@ -1,6 +1,6 @@
 # Agent Foundations
 
-An agent is useful when the system needs to reason over multiple steps, use tools, manage state, or adapt its plan based on intermediate results. In enterprise settings, the hard part is not making an agent act. It is making it act within safe, observable, and governable boundaries.
+An agent is useful when the system needs to reason over multiple steps, use tools, manage state, or adapt its plan based on intermediate results. In production, the hard part is not making an agent act. It is making it act within safe, observable, and governable boundaries.
 
 ## When agentic design is justified
 
@@ -11,7 +11,7 @@ Agents are most useful when:
 - intermediate failures should change the next step
 - the user benefits from supervised autonomy rather than one-shot answers
 
-If the workflow is stable, deterministic, and high risk, a conventional orchestrated system may be better.
+If the workflow is stable, deterministic, and high risk, a conventional orchestrated system is often better.
 
 ## Key building blocks
 
@@ -38,4 +38,4 @@ If the workflow is stable, deterministic, and high risk, a conventional orchestr
 
 ## A useful mental model
 
-Treat agents as controlled workflow systems with probabilistic planning, not as magic autonomous employees.
+Treat agents as controlled workflow systems with probabilistic planning, not as autonomous employees.

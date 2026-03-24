@@ -30,9 +30,11 @@
 .md-typeset .home-hero h1 {
   margin-top: 0;
   margin-bottom: 0.6rem;
-  max-width: 13ch;
   line-height: 1.02;
   letter-spacing: -0.03em;
+  max-width: none;
+  white-space: nowrap;
+  font-size: clamp(2.1rem, 4.2vw, 3.2rem);
 }
 
 .md-typeset .home-hero p {
@@ -97,5 +99,9 @@
 
   .md-typeset .home-hero-grid {
     grid-template-columns: 1fr;
+  }
+
+  .md-typeset .home-hero h1 {
+    white-space: normal;
   }
 }

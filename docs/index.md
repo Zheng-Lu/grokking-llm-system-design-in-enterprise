@@ -11,15 +11,13 @@ hide:
 
 <div class="book-metadata">
 <span>Open-source technical book</span>
-<span>Sidebar-first handbook</span>
-<span>Community-ready</span>
 </div>
 
 # Grokking LLM System Design
 
-_A reader-first handbook for RAG, agents, evaluation, production, and governance._
+_A LLM system design handbook organized by system archetype: foundations, platform infra, retrieval systems, agents, model lifecycle, and vertical applications._
 
-This project turns public technical material into a clean, maintainable book for engineers and platform teams working on enterprise LLM systems. The emphasis is on architecture, trade-offs, failure modes, and production reality, not product gloss.
+This project turns public technical material into a concise technical book for engineers and platform teams building real LLM systems. The emphasis is on requirements, architecture, operational controls, and trade-offs
 
 [Start Reading](introduction/index.md){ .md-button .md-button--primary }
 [GitHub](https://github.com/Zheng-Lu/grokking-llm-system-design-in-enterprise){ .md-button }
@@ -31,40 +29,16 @@ This project turns public technical material into a clean, maintainable book for
 **Catalogue**
 
 - [Introduction](introduction/index.md)
-- [RAG Systems](rag-systems/index.md)
+- [Foundations of LLM System Design](foundations/index.md)
+- [Inference and Platform Infra](inference-platform-infra/index.md)
+- [Knowledge Retrieval Systems](knowledge-retrieval-systems/index.md)
 - [Agent Systems](agent-systems/index.md)
-- [Evaluation](evaluation/index.md)
-- [LLMOps and Production](llmops-production/index.md)
-- [Security, Safety, and Governance](security-safety-governance/index.md)
+- [Model Lifecycle](model-lifecycle/index.md)
+- [Vertical Applications](vertical-applications/index.md)
 
 </div>
 
 </div>
-
-</div>
-
-## Who this book is for
-
-- engineers designing enterprise LLM systems under real constraints
-- AI platform teams standardizing infrastructure, evaluation, and governance
-- senior reviewers who want crisp architecture chapters instead of scattered notes
-- contributors who need a structure that scales as the book grows
-
-## Why this structure works
-
-<div class="grid cards" markdown>
-
-- :material-format-list-bulleted-square: **Sidebar-first catalogue**
-
-  The left sidebar is the main table of contents, organized as a handbook instead of a marketing site.
-
-- :material-book-open-variant-outline: **Reusable chapters**
-
-  Each section mixes foundations, design patterns, and prompts so readers can move from concept to system design.
-
-- :material-source-branch: **Contributor-friendly structure**
-
-  New chapters fit into a clear section model without adding frontend complexity or extra tooling.
 
 </div>
 
@@ -73,13 +47,9 @@ This project turns public technical material into a clean, maintainable book for
 | Section | Focus |
 | --- | --- |
 | [Introduction](introduction/index.md) | Scope, editorial model, and the path through the book |
-| [RAG Systems](rag-systems/index.md) | Retrieval, grounding, permissions, and search quality |
-| [Agent Systems](agent-systems/index.md) | Controlled autonomy, orchestration, and workflow design |
-| [Evaluation](evaluation/index.md) | Quality measurement, release gates, and eval loops |
-| [LLMOps and Production](llmops-production/index.md) | Applications, infra, gateways, and production controls |
-| [Security, Safety, and Governance](security-safety-governance/index.md) | Policy, permissions, auditability, and safety boundaries |
-| [Case Studies](case-studies/index.md) | Public examples that turn patterns into reusable lessons |
-
-## Editorial stance
-
-This book stays intentionally compact and technical. It favors architecture, trade-offs, and operational clarity over product language and frontend complexity.
+| [Foundations of LLM System Design](foundations/index.md) | Cross-cutting design lenses: system boundaries, control surfaces, and operating constraints |
+| [Inference and Platform Infra](inference-platform-infra/index.md) | Batch and online serving, gateways, observability, and shared platform design |
+| [Knowledge Retrieval Systems](knowledge-retrieval-systems/index.md) | Internal assistants, domain Q&A, notebook-style research, retrieval quality, and grounding |
+| [Agent Systems](agent-systems/index.md) | Controlled autonomy, tool use, internal coding agents, and orchestration patterns |
+| [Model Lifecycle](model-lifecycle/index.md) | Fine-tuning systems, evaluation gates, and model change management |
+| [Vertical Applications](vertical-applications/index.md) | End-to-end application designs that combine multiple lower-level patterns |

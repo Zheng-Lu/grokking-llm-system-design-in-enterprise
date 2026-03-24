@@ -53,30 +53,33 @@ Before writing a full chapter, make sure the topic has:
 
 Examples:
 
-- `docs/case-studies/microsoft-ask-learn.md`
-- `docs/rag-systems/permission-aware-rag.md`
-- `docs/evaluation/foundations.md`
+- `docs/knowledge-retrieval-systems/internal-chatgpt.md`
+- `docs/inference-platform-infra/llm-gateway-proxy.md`
+- `docs/model-lifecycle/llm-fine-tuning-system.md`
 
 ## Structure a case study
 
-Case studies should follow the chapter template in `docs/contributing/chapter-template.md`:
+Handbook chapters should follow the system design structure in `docs/contributing/chapter-template.md`:
 
-1. one-line summary
-2. problem
-3. why naive solutions fail
-4. architecture
-5. key design choices
-6. trade-offs
-7. reusable patterns
-8. failure modes
-9. interview version
-10. sources
+1. problem framing
+2. functional requirements
+3. non-functional requirements
+4. high-level architecture
+5. core components
+6. data flow or request flow
+7. scaling and reliability
+8. trade-offs
+9. failure modes
+10. security, safety, and governance
+11. interview discussion points
+
+Case studies should use the same chapter frame, then add a one-line summary and explicit sources.
 
 Keep the distinction between sourced facts and editorial inference explicit.
 
-When adding a new case study, update `docs/case-studies/index.md` if the new chapter changes how readers browse the section.
+When adding a new case study, place it in the section where readers would expect to find that system archetype.
 
-When adding a non-case-study chapter, update the relevant section landing page such as `docs/rag-systems/index.md` or `docs/llmops-production/index.md`.
+When adding any new chapter, update the relevant section landing page such as `docs/inference-platform-infra/index.md` or `docs/knowledge-retrieval-systems/index.md`.
 
 ## Submit diagrams
 

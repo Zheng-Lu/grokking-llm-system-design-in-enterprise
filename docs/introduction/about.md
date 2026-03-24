@@ -17,12 +17,12 @@ The project aims to document how enterprise LLM systems are actually shaped by c
 
 The book focuses on public, reusable lessons in:
 
-- enterprise assistants and copilots
-- retrieval-augmented systems
+- cross-cutting system design foundations
+- inference and shared platform infrastructure
+- knowledge retrieval systems
 - agent architectures and orchestration
-- AI platform and infra patterns
-- evaluation, observability, and release management
-- security, risk, and governance controls
+- model lifecycle and fine-tuning systems
+- vertical applications that combine multiple underlying patterns
 
 Each chapter should help readers answer not only _what_ a system looked like, but _why_ the design was chosen and what would likely break first.
 
@@ -31,10 +31,10 @@ Each chapter should help readers answer not only _what_ a system looked like, bu
 The book is organized as a handbook:
 
 1. section landing pages define the scope of each topic area
-2. chapter pages explain foundations, design patterns, and trade-offs
-3. case studies connect public examples back to reusable lessons
+2. chapter pages explain requirements, architecture, request flow, trade-offs, and failure modes
+3. source-backed case studies live inside the relevant section instead of sitting in a disconnected bucket
 
-Some sections also include design prompts to make the material useful in interview-style settings.
+The main design chapters also include interview discussion points so the material stays useful for system design practice, not only passive reading.
 
 ## What is out of scope
 

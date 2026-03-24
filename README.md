@@ -1,8 +1,8 @@
 # Grokking LLM System Design
 
-Open case studies on enterprise LLMs, RAG, agents, AI infra, and LLMOps.
+Open technical book on LLM system design across platform infra, retrieval systems, agents, model lifecycle, and vertical applications.
 
-This repository is an open technical book about how teams design, operate, and govern LLM systems in enterprise settings. It is organized as a reader-first handbook with sections for RAG, agent systems, evaluation, LLMOps, production, and governance.
+This repository is an open technical book about how teams design, operate, and govern LLM systems in practice. It is organized as a reader-first handbook around reusable system archetypes rather than a flat list of isolated prompts.
 
 ## Why this project exists
 
@@ -16,12 +16,12 @@ Most LLM writing is either too shallow, too vendor-specific, or too focused on d
 ## Book structure
 
 - Introduction
-- RAG Systems
+- Foundations of LLM System Design
+- Inference and Platform Infra
+- Knowledge Retrieval Systems
 - Agent Systems
-- Evaluation
-- LLMOps and Production
-- Security, Safety, and Governance
-- Case Studies
+- Model Lifecycle
+- Vertical Applications
 
 ## Screenshot
 
@@ -70,8 +70,8 @@ The deployment workflow is configured for `main` and `master` so it works during
 
 Useful contributions include:
 
-- new case studies backed by public sources
-- handbook chapters across the main section folders
+- new handbook chapters across the main section folders
+- source-backed case studies embedded inside the relevant section
 - diagrams that clarify architecture or trade-offs
 - editorial improvements that reduce ambiguity or verbosity
 
@@ -80,7 +80,7 @@ Start with [CONTRIBUTING.md](CONTRIBUTING.md), then review the docs style guidan
 ## Roadmap summary
 
 - MVP: establish the site, editorial rules, taxonomy pages, reusable patterns, and a few sample chapters
-- Near term: add high-quality case studies from major enterprise deployments and tighten the interview track
+- Near term: add high-quality chapters and case studies across the main system archetypes and tighten the interview track
 - Long term: turn the repository into a dependable reference for enterprise LLM system design
 
 See [docs/introduction/roadmap.md](docs/introduction/roadmap.md) for the detailed roadmap.

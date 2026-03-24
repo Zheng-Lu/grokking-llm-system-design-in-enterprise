@@ -1,112 +1,104 @@
 # Chapter Template
 
 !!! note "How to use this template"
-    Copy this structure when creating a new case study. Replace prompts with sourced content. If a section depends on inference, label it clearly instead of presenting it as fact.
+    Use this structure for new handbook chapters. If the page is also a case study, keep the same architecture but add explicit sources and clearly label any inference.
 
-## 1. One-line summary
+## Standard system design chapter
+
+### 1. Problem framing
+
+- What is the system trying to do?
+- Who are the users or upstream teams?
+- Why is this problem worth solving as a system, not a prompt demo?
+
+### 2. Functional requirements
+
+- What the system must do for readers or users
+- What interfaces or workflows it must support
+- What outputs, actions, or feedback loops it must produce
+
+### 3. Non-functional requirements
+
+- latency, throughput, and cost expectations
+- reliability and rollback expectations
+- observability, auditability, and compliance constraints
+- multi-tenant or permission boundaries if relevant
+
+### 4. High-level architecture
+
+Describe the end-to-end system shape. A diagram is useful if the flow is not obvious from text alone.
+
+### 5. Core components
+
+List the major services, stores, pipelines, and control points. Keep the components distinct enough that a reader could sketch the system quickly.
+
+### 6. Data flow or request flow
+
+Explain the path through the system step by step:
+
+- ingestion or input capture
+- retrieval, planning, or routing
+- model invocation
+- post-processing, policy checks, or action execution
+- logging, feedback, and evaluation loops
+
+### 7. Scaling and reliability
+
+Surface the engineering mechanics that keep the system useful under load:
+
+- batching, caching, sharding, or backpressure
+- retries, idempotency, and dead-letter handling
+- fallbacks, rollbacks, and operational ownership
+
+### 8. Trade-offs
+
+Document what the design gains and what it gives up. Good trade-off sections usually cover:
+
+- latency versus quality
+- flexibility versus control
+- centralization versus team autonomy
+- precision versus recall
+- autonomy versus reliability
+
+### 9. Failure modes
+
+List the ways the system can still fail in practice:
+
+- stale or incorrect context
+- missing permissions or overbroad access
+- weak tool contracts
+- evaluator blind spots
+- hidden operator toil
+
+### 10. Security, safety, and governance
+
+Make the control layer explicit:
+
+- identity and authorization
+- prompt or tool safety boundaries
+- audit and incident review
+- who approves high-risk changes or actions
+
+### 11. Interview discussion points
+
+Compress the chapter into an interview-friendly version:
+
+- what the interviewer asks
+- what a strong answer should cover
+- what weak answers usually miss
+
+## Case study addendum
+
+If the chapter is based on a public system, add:
+
+### One-line summary
 
 State the core design lesson in one sentence.
 
-Example prompt:
+### Sources
 
-`[Company/system]` shows how to build `[system type]` under `[enterprise constraint]` by combining `[key design moves]`.
-
-## 2. Problem
-
-Describe the real problem the system needed to solve.
-
-Cover:
-
-- users
-- jobs to be done
-- enterprise constraints
-- why the problem mattered enough to justify the system
-
-## 3. Why naive solutions fail
-
-Explain what breaks with the obvious approach.
-
-Typical failure modes:
-
-- hallucinated answers
-- bad retrieval quality
-- stale knowledge
-- permission leaks
-- latency spikes
-- cost blowups
-- weak evaluation
-
-## 4. Architecture
-
-Describe the end-to-end flow:
-
-- ingestion
-- indexing or memory
-- retrieval or planning
-- model invocation
-- tool use
-- guardrails
-- feedback loops
-
-Add a diagram if the architecture cannot be understood quickly from text alone.
-
-## 5. Key design choices
-
-List the highest-leverage decisions.
-
-Examples:
-
-- why a gateway exists
-- why hybrid retrieval was chosen
-- where authorization is enforced
-- why a human approval step remains in the loop
-
-## 6. Trade-offs
-
-Document what the architecture gains and what it gives up.
-
-Good trade-off sections mention:
-
-- quality versus latency
-- precision versus recall
-- flexibility versus control
-- autonomy versus reliability
-- centralization versus team-level speed
-
-## 7. Reusable patterns
-
-Name the patterns other teams can adopt.
-
-Each pattern should be stated independently from the company-specific details.
-
-## 8. Failure modes
-
-List the ways the system can still fail in practice.
-
-Examples:
-
-- permission drift
-- retrieval overfetch
-- evaluator blind spots
-- prompt regressions
-- broken tool contracts
-- weak human escalation paths
-
-## 9. Interview version
-
-Compress the case into a system design interview prompt:
-
-- what the interviewer asks
-- what components a strong answer should cover
-- what weak answers usually miss
-
-## 10. Sources
-
-List the sources that support the chapter.
-
-Recommended format:
+List the sources that support the chapter. Recommended format:
 
 - source title
 - source type
 - what claim or section it supports
-

@@ -23,11 +23,11 @@ Every chapter should be:
 
 A good chapter usually moves in this order:
 
-1. define the problem
-2. explain why naive approaches fail
-3. show the architecture
-4. call out the decisions that matter
-5. make trade-offs and failure modes explicit
+1. define the problem and requirements
+2. show the architecture and request flow
+3. explain the components and operating constraints
+4. make trade-offs and failure modes explicit
+5. close with governance and interview discussion points if useful
 
 Do not bury the design problem under long company background sections.
 
@@ -71,4 +71,3 @@ If those concerns are absent, the chapter is probably still too close to a demo 
 - Remove filler before adding explanation.
 - Rewrite vague claims into concrete system design statements.
 - If a paragraph has no design consequence, it probably does not belong.
-

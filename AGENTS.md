@@ -2,7 +2,7 @@
 
 ## Project purpose
 
-This repository is an open-source technical book called **Grokking LLM System Design**. It documents reusable system design patterns and public case studies for enterprise LLM applications, RAG systems, AI agents, AI infrastructure, and LLMOps.
+This repository is an open-source technical book called **Grokking LLM System Design**. It documents reusable system design patterns and public case studies across platform infra, retrieval systems, agent systems, model lifecycle, and vertical applications.
 
 ## Repository conventions
 
@@ -16,7 +16,7 @@ This repository is an open-source technical book called **Grokking LLM System De
 ## File and folder expectations
 
 - Put reader-facing site content in `docs/`.
-- Keep the main handbook sections under folders such as `docs/introduction/`, `docs/rag-systems/`, `docs/agent-systems/`, `docs/evaluation/`, `docs/llmops-production/`, and `docs/security-safety-governance/`.
+- Keep the main handbook sections under folders such as `docs/introduction/`, `docs/foundations/`, `docs/inference-platform-infra/`, `docs/knowledge-retrieval-systems/`, `docs/agent-systems/`, `docs/model-lifecycle/`, and `docs/vertical-applications/`.
 - Keep contributor and community documents at the repository root.
 - Place editable diagram sources in `docs/assets/diagrams/`.
 - Place exported images in `docs/assets/images/`.
@@ -33,7 +33,7 @@ This repository is an open-source technical book called **Grokking LLM System De
 ## Navigation updates
 
 - When adding a new documentation page, update `mkdocs.yml` in the same change.
-- If a new chapter changes how readers browse the book, update any relevant hub pages such as `docs/index.md`, `docs/introduction/roadmap.md`, the relevant section `index.md`, or `docs/case-studies/index.md`.
+- If a new chapter changes how readers browse the book, update any relevant hub pages such as `docs/index.md`, `docs/introduction/roadmap.md`, and the relevant section `index.md`.
 - Keep nav labels concise and consistent with the file contents.
 
 ## Change management
@@ -49,7 +49,7 @@ This repository is an open-source technical book called **Grokking LLM System De
 When adding a new chapter:
 
 1. Create the Markdown file in the appropriate `docs/` section.
-2. Follow `docs/contributing/chapter-template.md` if it is a case study.
+2. Follow `docs/contributing/chapter-template.md`.
 3. Add the page to `mkdocs.yml`.
 4. Update related section landing pages if discoverability would otherwise regress.
 5. Run `python scripts/check_links.py` and `uv run mkdocs build --strict`.
