@@ -6,7 +6,6 @@ This section covers the design lenses that apply across the rest of the book. Th
 
 - [System Boundaries](system-boundaries.md) explains where an LLM system starts and ends, and why most design mistakes come from drawing that boundary badly.
 - [Control Surfaces](control-surfaces.md) makes the operational layer explicit: identity, policy, tracing, evaluation, and change control.
-- [Platform Foundations](platform-foundations.md) frames the shared inference and platform layer used across product teams.
 - [Retrieval Foundations](retrieval-foundations.md) covers the retrieval stack, hybrid search, permissions, and grounded answers.
 - [Agent Foundations](agent-foundations.md) defines when agentic architecture is justified and where it fails.
 

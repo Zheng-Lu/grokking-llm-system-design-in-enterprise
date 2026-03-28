@@ -17,7 +17,7 @@ Most LLM writing is either too shallow, too vendor-specific, or too focused on d
 
 - Introduction
 - Foundations of LLM System Design
-- Inference and Platform Infra
+- LLM Infrastructure
 - Knowledge Retrieval Systems
 - Agent Systems
 - Model Lifecycle

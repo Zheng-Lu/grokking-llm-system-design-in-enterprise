@@ -23,15 +23,17 @@ nav:
       - foundations/index.md
       - foundations/system-boundaries.md
       - foundations/control-surfaces.md
-      - foundations/platform-foundations.md
       - foundations/retrieval-foundations.md
       - foundations/agent-foundations.md
-  - Inference and Platform Infra:
-      - inference-platform-infra/index.md
-      - inference-platform-infra/offline-batch-inference-service.md
-      - inference-platform-infra/online-inference-service.md
-      - inference-platform-infra/llm-gateway-proxy.md
-      - inference-platform-infra/evaluation-observability-system.md
+  - LLM Infrastructure:
+      - llm-infrastructure/index.md
+      - llm-infrastructure/inference/index.md
+      - llm-infrastructure/inference/offline-batch-inference-service.md
+      - llm-infrastructure/inference/online-inference-service.md
+      - llm-infrastructure/platform/index.md
+      - llm-infrastructure/platform/platform-foundations.md
+      - llm-infrastructure/platform/llm-gateway-proxy.md
+      - llm-infrastructure/platform/evaluation-observability-system.md
   - Knowledge Retrieval Systems:
       - knowledge-retrieval-systems/index.md
       - knowledge-retrieval-systems/internal-chatgpt.md

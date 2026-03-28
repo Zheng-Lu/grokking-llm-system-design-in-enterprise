@@ -54,7 +54,7 @@ Before writing a full chapter, make sure the topic has:
 Examples:
 
 - `docs/knowledge-retrieval-systems/internal-chatgpt.md`
-- `docs/inference-platform-infra/llm-gateway-proxy.md`
+- `docs/llm-infrastructure/platform/llm-gateway-proxy.md`
 - `docs/model-lifecycle/llm-fine-tuning-system.md`
 
 ## Structure a case study
@@ -79,7 +79,7 @@ Keep the distinction between sourced facts and editorial inference explicit.
 
 When adding a new case study, place it in the section where readers would expect to find that system archetype.
 
-When adding any new chapter, update the relevant section landing page such as `docs/inference-platform-infra/index.md` or `docs/knowledge-retrieval-systems/index.md`.
+When adding any new chapter, update the relevant section landing page such as `docs/llm-infrastructure/index.md` or `docs/knowledge-retrieval-systems/index.md`.
 
 ## Submit diagrams
 

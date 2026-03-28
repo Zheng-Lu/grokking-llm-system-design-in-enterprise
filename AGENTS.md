@@ -16,7 +16,7 @@ This repository is an open-source technical book called **Grokking LLM System De
 ## File and folder expectations
 
 - Put reader-facing site content in `docs/`.
-- Keep the main handbook sections under folders such as `docs/introduction/`, `docs/foundations/`, `docs/inference-platform-infra/`, `docs/knowledge-retrieval-systems/`, `docs/agent-systems/`, `docs/model-lifecycle/`, and `docs/vertical-applications/`.
+- Keep the main handbook sections under folders such as `docs/introduction/`, `docs/foundations/`, `docs/llm-infrastructure/`, `docs/knowledge-retrieval-systems/`, `docs/agent-systems/`, `docs/model-lifecycle/`, and `docs/vertical-applications/`.
 - Keep contributor and community documents at the repository root.
 - Place editable diagram sources in `docs/assets/diagrams/`.
 - Place exported images in `docs/assets/images/`.

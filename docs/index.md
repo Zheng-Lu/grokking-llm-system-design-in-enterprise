@@ -30,7 +30,7 @@ This project turns public technical material into a concise technical book for e
 
 - [Introduction](introduction/index.md)
 - [Foundations of LLM System Design](foundations/index.md)
-- [Inference and Platform Infra](inference-platform-infra/index.md)
+- [LLM Infrastructure](llm-infrastructure/index.md)
 - [Knowledge Retrieval Systems](knowledge-retrieval-systems/index.md)
 - [Agent Systems](agent-systems/index.md)
 - [Model Lifecycle](model-lifecycle/index.md)
@@ -48,7 +48,7 @@ This project turns public technical material into a concise technical book for e
 | --- | --- |
 | [Introduction](introduction/index.md) | Scope, editorial model, and the path through the book |
 | [Foundations of LLM System Design](foundations/index.md) | Cross-cutting design lenses: system boundaries, control surfaces, and operating constraints |
-| [Inference and Platform Infra](inference-platform-infra/index.md) | Batch and online serving, gateways, observability, and shared platform design |
+| [LLM Infrastructure](llm-infrastructure/index.md) | Batch and online serving, gateways, observability, and shared platform design |
 | [Knowledge Retrieval Systems](knowledge-retrieval-systems/index.md) | Internal assistants, domain Q&A, notebook-style research, retrieval quality, and grounding |
 | [Agent Systems](agent-systems/index.md) | Controlled autonomy, tool use, internal coding agents, and orchestration patterns |
 | [Model Lifecycle](model-lifecycle/index.md) | Fine-tuning systems, evaluation gates, and model change management |
