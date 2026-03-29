@@ -6,11 +6,11 @@ This roadmap keeps the project intentionally focused. The goal is a strong refer
 
 The MVP should establish the foundation of the book:
 
-- publish the MkDocs site and contributor workflow
-- define the core section introductions for the main LLM system archetypes
-- write a first set of reusable design chapters under each major section
-- create at least a few source-backed flagship case studies inside the relevant sections
-- provide interview-friendly discussion prompts within the core chapters
+- Publish the MkDocs site and contributor workflow
+- Define the core section introductions for the main LLM system archetypes
+- Write a first set of reusable design chapters under each major section
+- Create at least a few source-backed flagship case studies inside the relevant sections
+- Provide interview-friendly discussion prompts within the core chapters
 
 Success for MVP means a new contributor can understand the structure, add a chapter, and preview the site locally in minutes.
 
@@ -18,28 +18,28 @@ Success for MVP means a new contributor can understand the structure, add a chap
 
 After MVP, the next wave should deepen quality rather than widen scope blindly:
 
-- expand case studies across multiple company archetypes
-- tighten sourcing rules and review quality
-- add more diagrams for architecture-heavy chapters
-- introduce tighter cross-links between foundational chapters and vertical applications
-- refine interview discussion guidance with clearer rubrics and anti-patterns
+- Expand case studies across multiple company archetypes
+- Tighten sourcing rules and review quality
+- Add more diagrams for architecture-heavy chapters
+- Introduce tighter cross-links between foundational chapters and vertical applications
+- Refine interview discussion guidance with clearer rubrics and anti-patterns
 
 ## Long-term roadmap
 
 Once the project has enough high-quality content, it can grow into a durable reference:
 
-- build a stronger catalog of enterprise case studies across industries
-- maintain comparative chapters on recurring design choices across archetypes
-- add curated reading lists per topic area
-- document how patterns evolve as model capabilities and infra assumptions shift
-- establish a broader maintainer/reviewer structure if contribution volume grows
+- Build a stronger catalog of enterprise case studies across industries
+- Maintain comparative chapters on recurring design choices across archetypes
+- Add curated reading lists per topic area
+- Document how patterns evolve as model capabilities and infra assumptions shift
+- Establish a broader maintainer/reviewer structure if contribution volume grows
 
 ## What we are deliberately not doing
 
 To keep maintenance sane, the project does **not** plan to add:
 
-- a backend service
-- interactive databases
-- heavy custom frontend code
-- excessive docs plugins
-- dashboards or analytics unless there is a clear need
+- A backend service
+- Interactive databases
+- Heavy custom frontend code
+- Excessive docs plugins
+- Dashboards or analytics unless there is a clear need

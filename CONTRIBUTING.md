@@ -53,7 +53,7 @@ Before writing a full chapter, make sure the topic has:
 
 Examples:
 
-- `docs/knowledge-retrieval-systems/internal-chatgpt.md`
+- `docs/knowledge-retrieval-systems/rag-system.md`
 - `docs/llm-infrastructure/platform/llm-gateway-proxy.md`
 - `docs/model-lifecycle/llm-fine-tuning-system.md`
 

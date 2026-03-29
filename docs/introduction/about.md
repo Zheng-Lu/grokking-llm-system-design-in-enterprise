@@ -6,23 +6,23 @@
 
 The project aims to document how enterprise LLM systems are actually shaped by constraints that are easy to ignore in toy examples:
 
-- fragmented knowledge sources
-- data sensitivity and access control
-- latency and cost budgets
-- evaluation ambiguity
-- operational ownership
-- governance and audit requirements
+- Fragmented knowledge sources
+- Data sensitivity and access control
+- Latency and cost budgets
+- Evaluation ambiguity
+- Operational ownership
+- Governance and audit requirements
 
 ## Scope
 
 The book focuses on public, reusable lessons in:
 
-- cross-cutting system design foundations
-- inference and shared platform infrastructure
-- knowledge retrieval systems
-- agent architectures and orchestration
-- model lifecycle and fine-tuning systems
-- vertical applications that combine multiple underlying patterns
+- Cross-cutting system design foundations
+- Inference and shared platform infrastructure
+- Knowledge retrieval systems
+- Agent architectures and orchestration
+- Model lifecycle and fine-tuning systems
+- Vertical applications that combine multiple underlying patterns
 
 Each chapter should help readers answer not only _what_ a system looked like, but _why_ the design was chosen and what would likely break first.
 
@@ -40,10 +40,10 @@ The main design chapters also include interview discussion points so the materia
 
 The project is not trying to be:
 
-- a benchmark leaderboard
-- a product comparison site
-- a prompt library
-- a research survey of every new model release
+- A benchmark leaderboard
+- A product comparison site
+- A prompt library
+- A research survey of every new model release
 
 When a topic changes too quickly to stay useful, the book should prefer stable design principles over short-lived implementation detail.[^stability]
 
@@ -51,9 +51,9 @@ When a topic changes too quickly to stay useful, the book should prefer stable d
 
 Public case studies are rarely complete. That is fine. Good chapters can still be valuable if they clearly separate:
 
-- sourced facts
-- reasoned inference
-- open questions
+- Sourced facts
+- Reasoned inference
+- Open questions
 
 That distinction is a core editorial rule, not a footnote.
 

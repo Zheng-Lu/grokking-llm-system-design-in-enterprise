@@ -8,19 +8,19 @@ Teams need a reliable way to capture traces, turn failures into test coverage, a
 
 ## Functional requirements
 
-- capture structured traces across application, retrieval, tool, and model layers
-- store representative datasets for offline evaluation
-- run repeatable eval suites before releases
-- surface quality, latency, and cost trends to operators
-- support issue triage and failure clustering from production signals
+- Capture structured traces across application, retrieval, tool, and model layers
+- Store representative datasets for offline evaluation
+- Run repeatable eval suites before releases
+- Surface quality, latency, and cost trends to operators
+- Support issue triage and failure clustering from production signals
 
 ## Non-functional requirements
 
-- reproducibility for runs and release decisions
-- clear lineage from trace to dataset to evaluation result
-- privacy-aware logging and retention
-- support for both automated checks and human review
-- enough performance isolation that evaluation workloads do not disrupt serving
+- Reproducibility for runs and release decisions
+- Clear lineage from trace to dataset to evaluation result
+- Privacy-aware logging and retention
+- Support for both automated checks and human review
+- Enough performance isolation that evaluation workloads do not disrupt serving
 
 ## High-level architecture
 
@@ -38,12 +38,12 @@ flowchart LR
 
 ## Core components
 
-- trace schema and ingestion pipeline
-- trace store with request, retrieval, tool, and model events
-- failure triage and clustering workflow
-- curated dataset registry
-- automated eval runner and human review queue
-- dashboards, alerts, and release gate integration
+- Trace schema and ingestion pipeline
+- Trace store with request, retrieval, tool, and model events
+- Failure triage and clustering workflow
+- Curated dataset registry
+- Automated eval runner and human review queue
+- Dashboards, alerts, and release gate integration
 
 ## Data flow / request flow
 
@@ -56,32 +56,32 @@ flowchart LR
 
 ## Scaling and reliability
 
-- sample traces intelligently so storage cost does not erase signal
-- separate hot-path logging from heavier downstream enrichment
-- version datasets and prompts so results stay comparable over time
-- use multiple metrics instead of one aggregate score
-- assign ownership for keeping eval suites current as the system evolves
+- Sample traces intelligently so storage cost does not erase signal
+- Separate hot-path logging from heavier downstream enrichment
+- Version datasets and prompts so results stay comparable over time
+- Use multiple metrics instead of one aggregate score
+- Assign ownership for keeping eval suites current as the system evolves
 
 ## Trade-offs
 
-- richer traces improve debugging but increase storage and privacy burden
-- more human review improves signal quality but slows iteration
-- centralized release gates improve consistency but can frustrate teams if the metrics are poorly chosen
-- automated evaluators scale well but miss ambiguous or domain-specific failures
+- Richer traces improve debugging but increase storage and privacy burden
+- More human review improves signal quality but slows iteration
+- Centralized release gates improve consistency but can frustrate teams if the metrics are poorly chosen
+- Automated evaluators scale well but miss ambiguous or domain-specific failures
 
 ## Failure modes
 
-- collecting traces without converting them into reusable eval coverage
-- measuring generation quality while ignoring retrieval or tool quality
-- using noisy feedback without triage
-- no rollback path when a change passes latency checks but fails user trust
+- Collecting traces without converting them into reusable eval coverage
+- Measuring generation quality while ignoring retrieval or tool quality
+- Using noisy feedback without triage
+- No rollback path when a change passes latency checks but fails user trust
 
 ## Security / safety / governance
 
-- define which trace fields may contain sensitive user or enterprise data
-- keep reviewer access scoped to the data they need
-- make release criteria visible enough that risky exceptions require explicit sign-off
-- retain enough lineage that incidents can be reconstructed after the fact
+- Define which trace fields may contain sensitive user or enterprise data
+- Keep reviewer access scoped to the data they need
+- Make release criteria visible enough that risky exceptions require explicit sign-off
+- Retain enough lineage that incidents can be reconstructed after the fact
 
 ## Interview discussion points
 

@@ -4,10 +4,10 @@
 
 Reviews should improve:
 
-- technical clarity
-- structural coherence
-- source quality
-- usefulness for future readers
+- Technical clarity
+- Structural coherence
+- Source quality
+- Usefulness for future readers
 
 The target is not maximal prose polish. It is a chapter that is accurate, readable, and worth reusing.
 

@@ -6,12 +6,12 @@ Retrieval-augmented generation is the dominant pattern for enterprise knowledge 
 
 A practical enterprise retrieval stack usually includes:
 
-- ingestion and normalization
-- chunking and metadata design
-- dense and or sparse retrieval indexes
-- reranking or rank fusion
-- permission-aware filtering
-- grounded answer synthesis with citations
+- Ingestion and normalization
+- Chunking and metadata design
+- Dense and or sparse retrieval indexes
+- Reranking or rank fusion
+- Permission-aware filtering
+- Grounded answer synthesis with citations
 
 ## Design choices that matter
 
@@ -37,14 +37,14 @@ Good systems separate retrieval metrics from generation metrics and show users t
 
 ## Common enterprise failure modes
 
-- chunks too small to preserve meaning
-- chunks too large to retrieve precisely
-- exact-match queries that fail under pure dense retrieval
-- stale ACL snapshots or identity-unaware caches
-- answer evaluations that hide retrieval regressions
+- Chunks too small to preserve meaning
+- Chunks too large to retrieve precisely
+- Exact-match queries that fail under pure dense retrieval
+- Stale ACL snapshots or identity-unaware caches
+- Answer evaluations that hide retrieval regressions
 
 ## How the rest of this section uses these ideas
 
-- [Internal ChatGPT](../knowledge-retrieval-systems/internal-chatgpt.md) broadens the retrieval problem across many corpora and user roles.
+- [Design RAG System](../knowledge-retrieval-systems/rag-system.md) broadens the retrieval problem across many corpora and user roles.
 - [Domain-Specific Q&A Bot](../knowledge-retrieval-systems/domain-specific-q-and-a-bot.md) narrows the domain but raises the precision bar.
 - [NotebookLM-Style Research Workspace](../knowledge-retrieval-systems/notebooklm.md) adds per-workspace sources and citation-heavy synthesis.

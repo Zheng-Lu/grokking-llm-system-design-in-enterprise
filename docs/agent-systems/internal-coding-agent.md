@@ -8,37 +8,37 @@ The system must help internal engineers understand repositories, propose code ch
 
 ## Functional requirements
 
-- answer codebase questions using repository and documentation context
-- search files, symbols, and change history
-- propose edits, patches, or implementation plans
-- run bounded tools such as tests, linters, or static analysis when allowed
-- support approval checkpoints before risky writes or external actions
+- Answer codebase questions using repository and documentation context
+- Search files, symbols, and change history
+- Propose edits, patches, or implementation plans
+- Run bounded tools such as tests, linters, or static analysis when allowed
+- Support approval checkpoints before risky writes or external actions
 
 ## Non-functional requirements
 
-- high traceability for prompts, context, tool calls, and code changes
-- strong least-privilege boundaries for repository and runtime access
-- predictable failure handling so agents do not loop or spam tools
-- support for multiple repos, branches, and developer roles
-- latency low enough for interactive use, even if some actions remain asynchronous
+- High traceability for prompts, context, tool calls, and code changes
+- Strong least-privilege boundaries for repository and runtime access
+- Predictable failure handling so agents do not loop or spam tools
+- Support for multiple repos, branches, and developer roles
+- Latency low enough for interactive use, even if some actions remain asynchronous
 
 ## High-level architecture
 
-- chat or IDE integration surface
-- repository context service for search, symbols, and history
-- planning and execution orchestrator
-- sandboxed tool runner
-- policy engine for approvals, secrets, and repo permissions
-- trace and evaluation pipeline
+- Chat or IDE integration surface
+- Repository context service for search, symbols, and history
+- Planning and execution orchestrator
+- Sandboxed tool runner
+- Policy engine for approvals, secrets, and repo permissions
+- Trace and evaluation pipeline
 
 ## Core components
 
-- repository indexer and context retriever
-- planner or orchestrator
-- tool registry with stable contracts
-- sandbox execution environment
-- diff generation and review handoff
-- policy, audit, and trace pipeline
+- Repository indexer and context retriever
+- Planner or orchestrator
+- Tool registry with stable contracts
+- Sandbox execution environment
+- Diff generation and review handoff
+- Policy, audit, and trace pipeline
 
 ## Data flow / request flow
 
@@ -50,32 +50,32 @@ The system must help internal engineers understand repositories, propose code ch
 
 ## Scaling and reliability
 
-- keep repository indexing and retrieval separate from live execution
-- bound loops, retries, and tool budgets so the system cannot thrash
-- use deterministic wrappers around risky tools where possible
-- preserve execution traces so regressions can be replayed and reviewed
-- separate read-only assistance from write-capable agent modes
+- Keep repository indexing and retrieval separate from live execution
+- Bound loops, retries, and tool budgets so the system cannot thrash
+- Use deterministic wrappers around risky tools where possible
+- Preserve execution traces so regressions can be replayed and reviewed
+- Separate read-only assistance from write-capable agent modes
 
 ## Trade-offs
 
-- more autonomy reduces manual toil but raises review and safety requirements
-- richer repository context improves quality but can increase latency and prompt size
-- direct tool execution improves usefulness but expands the attack surface
-- one general coding agent is simpler to discover but harder to tune across very different workflows
+- More autonomy reduces manual toil but raises review and safety requirements
+- Richer repository context improves quality but can increase latency and prompt size
+- Direct tool execution improves usefulness but expands the attack surface
+- One general coding agent is simpler to discover but harder to tune across very different workflows
 
 ## Failure modes
 
-- context retrieval misses the files that actually matter
-- tool outputs are accepted without schema or sanity checks
-- the agent loops on the same failing action
-- repository writes happen without enough human review or ownership awareness
+- Context retrieval misses the files that actually matter
+- Tool outputs are accepted without schema or sanity checks
+- The agent loops on the same failing action
+- Repository writes happen without enough human review or ownership awareness
 
 ## Security / safety / governance
 
-- keep repository, secret, and runtime access scoped to the user and task
-- require explicit approval for writes, external network actions, or privileged commands
-- store enough audit detail to reconstruct why a change was proposed or applied
-- defend against prompt injection from repository content and tool output
+- Keep repository, secret, and runtime access scoped to the user and task
+- Require explicit approval for writes, external network actions, or privileged commands
+- Store enough audit detail to reconstruct why a change was proposed or applied
+- Defend against prompt injection from repository content and tool output
 
 ## Interview discussion points
 

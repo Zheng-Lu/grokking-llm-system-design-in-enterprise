@@ -13,17 +13,17 @@ Large organizations accumulate technical learning material across documentation,
 
 ## Functional requirements
 
-- search and answer over learning material across multiple content systems
-- keep answers tied to source content rather than free-form invention
-- support conversational follow-up without losing grounding
-- surface relevant sources or evidence to the reader
+- Search and answer over learning material across multiple content systems
+- Keep answers tied to source content rather than free-form invention
+- Support conversational follow-up without losing grounding
+- Surface relevant sources or evidence to the reader
 
 ## Non-functional requirements
 
-- freshness as learning content evolves
-- trust through grounding and visible evidence
-- safe permission handling when content visibility differs by user
-- practical latency for an interactive assistant
+- Freshness as learning content evolves
+- Trust through grounding and visible evidence
+- Safe permission handling when content visibility differs by user
+- Practical latency for an interactive assistant
 
 ## High-level architecture
 
@@ -37,11 +37,11 @@ For a system of this type, the likely architecture has these layers:
 
 ## Core components
 
-- ingestion and indexing pipeline
-- hybrid retrieval and reranking
-- permission-aware filtering
-- answer synthesis with citations or evidence links
-- feedback capture tied to evaluation
+- Ingestion and indexing pipeline
+- Hybrid retrieval and reranking
+- Permission-aware filtering
+- Answer synthesis with citations or evidence links
+- Feedback capture tied to evaluation
 
 ## Data flow / request flow
 
@@ -53,30 +53,30 @@ For a system of this type, the likely architecture has these layers:
 
 ## Scaling and reliability
 
-- keep content freshness separate from answer generation so stale indexes are visible
-- make retrieval quality measurable for product names, acronyms, and exact technical phrases
-- isolate permission updates so ACL drift does not silently leak into user-visible behavior
+- Keep content freshness separate from answer generation so stale indexes are visible
+- Make retrieval quality measurable for product names, acronyms, and exact technical phrases
+- Isolate permission updates so ACL drift does not silently leak into user-visible behavior
 
 ## Trade-offs
 
-- richer grounding versus latency
-- tighter authorization checks versus simpler architecture
-- centralized indexing versus faster content team updates
-- concise answers versus enough evidence for user trust
+- Richer grounding versus latency
+- Tighter authorization checks versus simpler architecture
+- Centralized indexing versus faster content team updates
+- Concise answers versus enough evidence for user trust
 
 ## Failure modes
 
-- stale learning material surfacing above current guidance
-- high recall but low precision on broad technical queries
-- weak citation quality that makes answers look grounded when they are not
-- missing feedback pipelines, so repeated failure classes never become eval cases
+- Stale learning material surfacing above current guidance
+- High recall but low precision on broad technical queries
+- Weak citation quality that makes answers look grounded when they are not
+- Missing feedback pipelines, so repeated failure classes never become eval cases
 
 ## Security / safety / governance
 
-- align retrieval permissions to the source systems
-- keep citations and logs from exposing unauthorized snippets
-- trace prompt, retrieval, and model versions for later review
-- require clear review boundaries for prompt or ranking changes
+- Align retrieval permissions to the source systems
+- Keep citations and logs from exposing unauthorized snippets
+- Trace prompt, retrieval, and model versions for later review
+- Require clear review boundaries for prompt or ranking changes
 
 ## Interview discussion points
 
@@ -89,7 +89,7 @@ For a system of this type, the likely architecture has these layers:
 
 To finish this chapter, add and map public sources such as:
 
-- official product or engineering posts
-- conference talks or demos
-- architecture descriptions that support retrieval and grounding claims
-- documentation that clarifies target users and workflow shape
+- Official product or engineering posts
+- Conference talks or demos
+- Architecture descriptions that support retrieval and grounding claims
+- Documentation that clarifies target users and workflow shape

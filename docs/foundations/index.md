@@ -13,8 +13,8 @@ This section covers the design lenses that apply across the rest of the book. Th
 
 The same failure patterns reappear across platform infra, retrieval systems, agents, and vertical applications:
 
-- the model is treated as the system instead of one component
-- control paths are added after launch instead of designed up front
-- reliability and governance are discussed only after the feature shape is fixed
+- The model is treated as the system instead of one component
+- Control paths are added after launch instead of designed up front
+- Reliability and governance are discussed only after the feature shape is fixed
 
 These chapters give the rest of the book a shared vocabulary.

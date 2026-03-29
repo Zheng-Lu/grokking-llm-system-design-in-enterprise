@@ -8,18 +8,18 @@ Multiple applications and agents need model access, but duplicated provider logi
 
 ## Functional requirements
 
-- route requests across providers, models, or deployments
-- enforce policy, quota, and budget controls
-- normalize request and trace metadata
-- support retries, fallbacks, and optional caching
-- centralize prompt and configuration version selection where appropriate
+- Route requests across providers, models, or deployments
+- Enforce policy, quota, and budget controls
+- Normalize request and trace metadata
+- Support retries, fallbacks, and optional caching
+- Centralize prompt and configuration version selection where appropriate
 
 ## Non-functional requirements
 
-- low incremental latency relative to direct provider calls
-- high availability because many downstream systems depend on it
-- enough transparency that application teams can debug routing and policy outcomes
-- compatibility with structured outputs, streaming, and provider-specific features
+- Low incremental latency relative to direct provider calls
+- High availability because many downstream systems depend on it
+- Enough transparency that application teams can debug routing and policy outcomes
+- Compatibility with structured outputs, streaming, and provider-specific features
 
 ## High-level architecture
 
@@ -36,12 +36,12 @@ flowchart LR
 
 ## Core components
 
-- request normalization layer
-- policy and quota engine
-- routing and fallback engine
-- prompt and configuration registry
-- cache and retry layer where justified
-- trace export and cost accounting pipeline
+- Request normalization layer
+- Policy and quota engine
+- Routing and fallback engine
+- Prompt and configuration registry
+- Cache and retry layer where justified
+- Trace export and cost accounting pipeline
 
 ## Data flow / request flow
 
@@ -53,31 +53,31 @@ flowchart LR
 
 ## Scaling and reliability
 
-- keep adapters isolated so provider failures do not poison the full gateway
-- make routing decisions observable enough to debug cost and quality changes
-- treat caching as an explicit product choice, not a hidden optimization
-- separate control-plane configuration rollout from hot-path request serving
+- Keep adapters isolated so provider failures do not poison the full gateway
+- Make routing decisions observable enough to debug cost and quality changes
+- Treat caching as an explicit product choice, not a hidden optimization
+- Separate control-plane configuration rollout from hot-path request serving
 
 ## Trade-offs
 
-- centralization improves consistency but creates a shared critical dependency
-- abstraction improves portability but can hide valuable provider differences
-- caching reduces cost but can mask prompt or model regressions
-- policy enforcement at the gateway simplifies app logic but may not be enough for application-specific safety constraints
+- Centralization improves consistency but creates a shared critical dependency
+- Abstraction improves portability but can hide valuable provider differences
+- Caching reduces cost but can mask prompt or model regressions
+- Policy enforcement at the gateway simplifies app logic but may not be enough for application-specific safety constraints
 
 ## Failure modes
 
-- the gateway becomes a thin pass-through with little value
-- routing logic is opaque and hard to explain to application owners
-- policy expectations diverge between the gateway and the app layer
-- one misconfigured rollout affects many downstream systems at once
+- The gateway becomes a thin pass-through with little value
+- Routing logic is opaque and hard to explain to application owners
+- Policy expectations diverge between the gateway and the app layer
+- One misconfigured rollout affects many downstream systems at once
 
 ## Security / safety / governance
 
-- use the gateway as a consistent point for provider credentials and outbound access
-- record which policy and prompt versions were active for each request
-- keep tenant and user metadata accurate enough for audit and incident review
-- avoid turning the gateway into a hidden application-logic layer with unclear ownership
+- Use the gateway as a consistent point for provider credentials and outbound access
+- Record which policy and prompt versions were active for each request
+- Keep tenant and user metadata accurate enough for audit and incident review
+- Avoid turning the gateway into a hidden application-logic layer with unclear ownership
 
 ## Interview discussion points
 

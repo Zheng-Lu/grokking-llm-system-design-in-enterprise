@@ -19,10 +19,10 @@
 
 ### 3. Non-functional requirements
 
-- latency, throughput, and cost expectations
-- reliability and rollback expectations
-- observability, auditability, and compliance constraints
-- multi-tenant or permission boundaries if relevant
+- Latency, throughput, and cost expectations
+- Reliability and rollback expectations
+- Observability, auditability, and compliance constraints
+- Multi-tenant or permission boundaries if relevant
 
 ### 4. High-level architecture
 
@@ -36,56 +36,56 @@ List the major services, stores, pipelines, and control points. Keep the compone
 
 Explain the path through the system step by step:
 
-- ingestion or input capture
-- retrieval, planning, or routing
-- model invocation
-- post-processing, policy checks, or action execution
-- logging, feedback, and evaluation loops
+- Ingestion or input capture
+- Retrieval, planning, or routing
+- Model invocation
+- Post-processing, policy checks, or action execution
+- Logging, feedback, and evaluation loops
 
 ### 7. Scaling and reliability
 
 Surface the engineering mechanics that keep the system useful under load:
 
-- batching, caching, sharding, or backpressure
-- retries, idempotency, and dead-letter handling
-- fallbacks, rollbacks, and operational ownership
+- Batching, caching, sharding, or backpressure
+- Retries, idempotency, and dead-letter handling
+- Fallbacks, rollbacks, and operational ownership
 
 ### 8. Trade-offs
 
 Document what the design gains and what it gives up. Good trade-off sections usually cover:
 
-- latency versus quality
-- flexibility versus control
-- centralization versus team autonomy
-- precision versus recall
-- autonomy versus reliability
+- Latency versus quality
+- Flexibility versus control
+- Centralization versus team autonomy
+- Precision versus recall
+- Autonomy versus reliability
 
 ### 9. Failure modes
 
 List the ways the system can still fail in practice:
 
-- stale or incorrect context
-- missing permissions or overbroad access
-- weak tool contracts
-- evaluator blind spots
-- hidden operator toil
+- Stale or incorrect context
+- Missing permissions or overbroad access
+- Weak tool contracts
+- Evaluator blind spots
+- Hidden operator toil
 
 ### 10. Security, safety, and governance
 
 Make the control layer explicit:
 
-- identity and authorization
-- prompt or tool safety boundaries
-- audit and incident review
-- who approves high-risk changes or actions
+- Identity and authorization
+- Prompt or tool safety boundaries
+- Audit and incident review
+- Who approves high-risk changes or actions
 
 ### 11. Interview discussion points
 
 Compress the chapter into an interview-friendly version:
 
-- what the interviewer asks
-- what a strong answer should cover
-- what weak answers usually miss
+- What the interviewer asks
+- What a strong answer should cover
+- What weak answers usually miss
 
 ## Case study addendum
 
@@ -99,6 +99,6 @@ State the core design lesson in one sentence.
 
 List the sources that support the chapter. Recommended format:
 
-- source title
-- source type
-- what claim or section it supports
+- Source title
+- Source type
+- What claim or section it supports

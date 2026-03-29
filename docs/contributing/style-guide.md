@@ -6,11 +6,11 @@ Write for readers who want technical signal fast.
 
 Every chapter should be:
 
-- concise
-- structured
-- technically precise
-- evidence-driven
-- useful to someone designing a similar system
+- Concise
+- Structured
+- Technically precise
+- Evidence-driven
+- Useful to someone designing a similar system
 
 ## Tone
 
@@ -50,12 +50,12 @@ Do not bury the design problem under long company background sections.
 
 Enterprise chapters should explicitly consider:
 
-- data boundaries
-- identity and authorization
-- latency and cost
-- observability
-- evaluation
-- operational ownership
+- Data boundaries
+- Identity and authorization
+- Latency and cost
+- Observability
+- Evaluation
+- Operational ownership
 
 If those concerns are absent, the chapter is probably still too close to a demo mindset.
 

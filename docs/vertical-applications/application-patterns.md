@@ -6,10 +6,10 @@ LLM applications are the user-facing layer of the stack: assistants, copilots, s
 
 An application chapter should explain:
 
-- who the user is and what job they need to get done
-- which lower-level systems the product depends on
-- what remains deterministic and what is model-driven
-- how the interface exposes evidence, uncertainty, and escalation
+- Who the user is and what job they need to get done
+- Which lower-level systems the product depends on
+- What remains deterministic and what is model-driven
+- How the interface exposes evidence, uncertainty, and escalation
 
 ## Shared architecture concerns
 
@@ -23,10 +23,10 @@ Most vertical applications combine:
 
 ## Typical application mistakes
 
-- treating every task as if it belongs in one generic chat box
-- hiding the difference between grounded answers and open-ended generation
-- shipping without explicit fallback behavior when the model is wrong
-- optimizing surface polish before the control layer is ready
+- Treating every task as if it belongs in one generic chat box
+- Hiding the difference between grounded answers and open-ended generation
+- Shipping without explicit fallback behavior when the model is wrong
+- Optimizing surface polish before the control layer is ready
 
 ## How to read the next chapters
 

@@ -8,36 +8,36 @@ The system must answer high-value questions in one domain, such as legal policy,
 
 ## Functional requirements
 
-- answer questions over a clearly bounded corpus
-- support exact lookups as well as conceptual questions
-- attach citations to the relevant source passages
-- collect feedback on missing or incorrect answers
-- expose enough metadata for reviewers to inspect retrieval quality
+- Answer questions over a clearly bounded corpus
+- Support exact lookups as well as conceptual questions
+- Attach citations to the relevant source passages
+- Collect feedback on missing or incorrect answers
+- Expose enough metadata for reviewers to inspect retrieval quality
 
 ## Non-functional requirements
 
-- high precision on the domain's critical queries
-- strong freshness guarantees if the corpus changes frequently
-- explainability for reviewers and subject-matter experts
-- support for domain-specific terminology, acronyms, and identifiers
-- predictable latency for interactive use
+- High precision on the domain's critical queries
+- Strong freshness guarantees if the corpus changes frequently
+- Explainability for reviewers and subject-matter experts
+- Support for domain-specific terminology, acronyms, and identifiers
+- Predictable latency for interactive use
 
 ## High-level architecture
 
-- ingestion pipeline tuned to the domain corpus
-- retrieval stack with lexical and semantic search
-- reranking tuned to domain-specific relevance
-- grounded answer generation with citation rendering
-- evaluation pipeline with domain-focused golden sets
+- Ingestion pipeline tuned to the domain corpus
+- Retrieval stack with lexical and semantic search
+- Reranking tuned to domain-specific relevance
+- Grounded answer generation with citation rendering
+- Evaluation pipeline with domain-focused golden sets
 
 ## Core components
 
-- corpus normalizer and metadata extractor
-- hybrid retriever
-- optional domain-specific query understanding
-- answer synthesis layer
-- domain review workflow for difficult or high-risk queries
-- evaluation harness with representative query sets
+- Corpus normalizer and metadata extractor
+- Hybrid retriever
+- Optional domain-specific query understanding
+- Answer synthesis layer
+- Domain review workflow for difficult or high-risk queries
+- Evaluation harness with representative query sets
 
 ## Data flow / request flow
 
@@ -49,31 +49,31 @@ The system must answer high-value questions in one domain, such as legal policy,
 
 ## Scaling and reliability
 
-- keep domain metadata rich enough that retrieval can use filters before ranking
-- build golden queries for exact-match and acronym-heavy lookups
-- separate ingestion freshness issues from ranking issues in diagnostics
-- preserve source version information so content changes are auditable
+- Keep domain metadata rich enough that retrieval can use filters before ranking
+- Build golden queries for exact-match and acronym-heavy lookups
+- Separate ingestion freshness issues from ranking issues in diagnostics
+- Preserve source version information so content changes are auditable
 
 ## Trade-offs
 
-- narrow scope improves precision but limits reuse across teams
-- domain-specific ranking improves quality but increases maintenance
-- stronger review workflows improve trust but slow iteration
-- answer synthesis improves readability but introduces another failure layer beyond retrieval
+- Narrow scope improves precision but limits reuse across teams
+- Domain-specific ranking improves quality but increases maintenance
+- Stronger review workflows improve trust but slow iteration
+- Answer synthesis improves readability but introduces another failure layer beyond retrieval
 
 ## Failure modes
 
-- lexical edge cases missed by overly semantic retrieval
-- domain synonyms or acronyms that degrade recall
-- stale content remaining in the index after source changes
-- reviewers relying on answer quality alone instead of inspecting retrieval coverage
+- Lexical edge cases missed by overly semantic retrieval
+- Domain synonyms or acronyms that degrade recall
+- Stale content remaining in the index after source changes
+- Reviewers relying on answer quality alone instead of inspecting retrieval coverage
 
 ## Security / safety / governance
 
-- reflect the domain's review and approval rules in the release process
-- keep source citations visible for subject-matter review
-- classify high-risk content paths before they can enter prompts
-- make escalation paths explicit when the system should defer to a human expert
+- Reflect the domain's review and approval rules in the release process
+- Keep source citations visible for subject-matter review
+- Classify high-risk content paths before they can enter prompts
+- Make escalation paths explicit when the system should defer to a human expert
 
 ## Interview discussion points
 

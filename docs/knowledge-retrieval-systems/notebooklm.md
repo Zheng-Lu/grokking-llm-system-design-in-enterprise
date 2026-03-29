@@ -8,36 +8,36 @@ The system must let a user assemble a working set of sources, ask grounded quest
 
 ## Functional requirements
 
-- create notebooks or workspaces with explicit source collections
-- ingest documents, notes, transcripts, or links into a workspace
-- answer questions only from the notebook's source set
-- generate citations, outlines, summaries, or notes linked to evidence
-- preserve notebook state across sessions
+- Create notebooks or workspaces with explicit source collections
+- Ingest documents, notes, transcripts, or links into a workspace
+- Answer questions only from the notebook's source set
+- Generate citations, outlines, summaries, or notes linked to evidence
+- Preserve notebook state across sessions
 
 ## Non-functional requirements
 
-- workspace isolation so one notebook does not leak into another
-- interactive latency while handling multi-document synthesis
-- support for heterogeneous document formats
-- traceability from note or answer back to source passages
-- manageable storage and reindex costs as notebooks accumulate
+- Workspace isolation so one notebook does not leak into another
+- Interactive latency while handling multi-document synthesis
+- Support for heterogeneous document formats
+- Traceability from note or answer back to source passages
+- Manageable storage and reindex costs as notebooks accumulate
 
 ## High-level architecture
 
-- notebook service that owns workspace metadata
-- source ingestion and parsing pipeline
-- per-workspace or logically partitioned retrieval index
-- synthesis layer for notes, answers, and cross-document summaries
-- citation and provenance renderer
+- Notebook service that owns workspace metadata
+- Source ingestion and parsing pipeline
+- Per-workspace or logically partitioned retrieval index
+- Synthesis layer for notes, answers, and cross-document summaries
+- Citation and provenance renderer
 
 ## Core components
 
-- workspace metadata store
-- source parser and chunker
-- retrieval service scoped to notebook boundaries
-- prompt/context builder for question answering and note generation
-- note artifact store
-- trace and feedback pipeline
+- Workspace metadata store
+- Source parser and chunker
+- Retrieval service scoped to notebook boundaries
+- Prompt/context builder for question answering and note generation
+- Note artifact store
+- Trace and feedback pipeline
 
 ## Data flow / request flow
 
@@ -49,31 +49,31 @@ The system must let a user assemble a working set of sources, ask grounded quest
 
 ## Scaling and reliability
 
-- partition storage and retrieval by workspace to preserve isolation and manage growth
-- support incremental reindexing when a notebook changes instead of rebuilding everything
-- cache stable parsing artifacts more aggressively than answer results
-- keep provenance durable so notebooks remain trustworthy over time
+- Partition storage and retrieval by workspace to preserve isolation and manage growth
+- Support incremental reindexing when a notebook changes instead of rebuilding everything
+- Cache stable parsing artifacts more aggressively than answer results
+- Keep provenance durable so notebooks remain trustworthy over time
 
 ## Trade-offs
 
-- notebook-scoped retrieval improves relevance but reduces reuse across notebooks
-- richer note generation helps usability but increases the chance of unsupported synthesis
-- per-workspace indexing improves isolation but can increase operational overhead
-- long-context summarization reduces retrieval hops but can hide which sources really mattered
+- Notebook-scoped retrieval improves relevance but reduces reuse across notebooks
+- Richer note generation helps usability but increases the chance of unsupported synthesis
+- Per-workspace indexing improves isolation but can increase operational overhead
+- Long-context summarization reduces retrieval hops but can hide which sources really mattered
 
 ## Failure modes
 
-- answers that accidentally mix notebook content with unrelated global context
-- broken provenance links that weaken user trust
-- source parsing failures that silently exclude important evidence
-- notebooks becoming too large for the intended interactive experience
+- Answers that accidentally mix notebook content with unrelated global context
+- Broken provenance links that weaken user trust
+- Source parsing failures that silently exclude important evidence
+- Notebooks becoming too large for the intended interactive experience
 
 ## Security / safety / governance
 
-- keep workspace access aligned to notebook ownership and sharing rules
-- track which sources were visible when a note or answer was generated
-- prevent notebook imports from bypassing enterprise content controls
-- make retention rules explicit for uploaded or attached documents
+- Keep workspace access aligned to notebook ownership and sharing rules
+- Track which sources were visible when a note or answer was generated
+- Prevent notebook imports from bypassing enterprise content controls
+- Make retention rules explicit for uploaded or attached documents
 
 ## Interview discussion points
 

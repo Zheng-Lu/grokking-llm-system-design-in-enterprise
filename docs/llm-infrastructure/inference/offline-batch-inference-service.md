@@ -8,19 +8,19 @@ The system must process large collections of records with model-backed transform
 
 ## Functional requirements
 
-- accept large inference jobs with explicit input sets
-- support different tasks such as tagging, classification, and summarization
-- track per-job and per-record status
-- retry failed items without replaying successful work
-- persist outputs and metadata for downstream systems
+- Accept large inference jobs with explicit input sets
+- Support different tasks such as tagging, classification, and summarization
+- Track per-job and per-record status
+- Retry failed items without replaying successful work
+- Persist outputs and metadata for downstream systems
 
 ## Non-functional requirements
 
-- high throughput and predictable cost
-- resumability after worker or provider failures
-- idempotent execution for retries and replays
-- auditability for model version, prompt version, and input lineage
-- tenant isolation if multiple teams use the same service
+- High throughput and predictable cost
+- Resumability after worker or provider failures
+- Idempotent execution for retries and replays
+- Auditability for model version, prompt version, and input lineage
+- Tenant isolation if multiple teams use the same service
 
 ## High-level architecture
 
@@ -37,12 +37,12 @@ flowchart LR
 
 ## Core components
 
-- job submission API
-- planner that shards large jobs into stable work units
-- queue or scheduler that controls worker concurrency
-- worker pool with idempotent task handlers
+- Job submission API
+- Planner that shards large jobs into stable work units
+- Queue or scheduler that controls worker concurrency
+- Worker pool with idempotent task handlers
 - LLM gateway for routing, quotas, and standardized traces
-- artifact store for outputs, errors, and job metadata
+- Artifact store for outputs, errors, and job metadata
 
 ## Data flow / request flow
 
@@ -55,32 +55,32 @@ flowchart LR
 
 ## Scaling and reliability
 
-- shard jobs so retries do not replay the entire workload
-- use idempotent write patterns for output persistence
-- enforce concurrency and rate limits at the worker and gateway layers
-- checkpoint progress so long jobs survive deploys or worker loss
-- separate poison-record handling from transient provider failures
+- Shard jobs so retries do not replay the entire workload
+- Use idempotent write patterns for output persistence
+- Enforce concurrency and rate limits at the worker and gateway layers
+- Checkpoint progress so long jobs survive deploys or worker loss
+- Separate poison-record handling from transient provider failures
 
 ## Trade-offs
 
-- bigger batches reduce per-item overhead but increase blast radius on failure
-- aggressive concurrency improves throughput but raises quota and cost risk
-- centralized batch infrastructure improves control but may slow product-specific iteration
-- caching or deduplication can save cost but may hide freshness changes
+- Bigger batches reduce per-item overhead but increase blast radius on failure
+- Aggressive concurrency improves throughput but raises quota and cost risk
+- Centralized batch infrastructure improves control but may slow product-specific iteration
+- Caching or deduplication can save cost but may hide freshness changes
 
 ## Failure modes
 
-- non-deterministic retries that produce conflicting outputs
-- partial writes that make job status look healthier than reality
-- poison records that repeatedly fail and clog worker capacity
-- unbounded backfills that starve higher-priority workloads
+- Non-deterministic retries that produce conflicting outputs
+- Partial writes that make job status look healthier than reality
+- Poison records that repeatedly fail and clog worker capacity
+- Unbounded backfills that starve higher-priority workloads
 
 ## Security / safety / governance
 
-- restrict which datasets and prompts each tenant can run
-- record model, prompt, and dataset versions for later audit
-- apply data retention and redaction rules before prompts leave the platform
-- keep service-account permissions narrower than the source data owner surface
+- Restrict which datasets and prompts each tenant can run
+- Record model, prompt, and dataset versions for later audit
+- Apply data retention and redaction rules before prompts leave the platform
+- Keep service-account permissions narrower than the source data owner surface
 
 ## Interview discussion points
 

@@ -8,19 +8,19 @@ The system must serve low-latency LLM-backed requests for applications such as c
 
 ## Functional requirements
 
-- accept synchronous requests through a stable API
-- support streaming or incremental responses when the product needs it
-- route requests across models or providers
-- attach request metadata for tracing, quotas, and experimentation
-- return standardized error semantics to callers
+- Accept synchronous requests through a stable API
+- Support streaming or incremental responses when the product needs it
+- Route requests across models or providers
+- Attach request metadata for tracing, quotas, and experimentation
+- Return standardized error semantics to callers
 
 ## Non-functional requirements
 
-- low and predictable latency
-- high availability under provider or network failures
-- graceful degradation when budgets, providers, or policies block a request
-- per-tenant isolation for quotas and secrets
-- traceability across retrieval, tool use, and model invocation
+- Low and predictable latency
+- High availability under provider or network failures
+- Graceful degradation when budgets, providers, or policies block a request
+- Per-tenant isolation for quotas and secrets
+- Traceability across retrieval, tool use, and model invocation
 
 ## High-level architecture
 
@@ -37,12 +37,12 @@ flowchart LR
 
 ## Core components
 
-- synchronous API layer
-- context assembly service for prompts, metadata, or retrieved context
-- policy and quota checks
+- Synchronous API layer
+- Context assembly service for prompts, metadata, or retrieved context
+- Policy and quota checks
 - LLM gateway for routing, caching, and fallbacks
-- trace and metric pipeline
-- response formatter for streaming, citations, or structured outputs
+- Trace and metric pipeline
+- Response formatter for streaming, citations, or structured outputs
 
 ## Data flow / request flow
 
@@ -55,32 +55,32 @@ flowchart LR
 
 ## Scaling and reliability
 
-- use concurrency controls to protect provider quotas and internal dependencies
-- isolate slow retrieval or tool dependencies from the core serving path
-- add fallbacks or lower-cost models for degraded conditions where appropriate
-- standardize timeouts and circuit-breaking so failures are visible and bounded
-- keep the serving path stateless where possible and externalize session state
+- Use concurrency controls to protect provider quotas and internal dependencies
+- Isolate slow retrieval or tool dependencies from the core serving path
+- Add fallbacks or lower-cost models for degraded conditions where appropriate
+- Standardize timeouts and circuit-breaking so failures are visible and bounded
+- Keep the serving path stateless where possible and externalize session state
 
 ## Trade-offs
 
-- richer context improves answer quality but hurts latency and cost
-- central policy checks improve consistency but add a control-path hop
-- provider abstraction helps portability but can hide model-specific capabilities
-- streaming improves responsiveness but complicates moderation and retry semantics
+- Richer context improves answer quality but hurts latency and cost
+- Central policy checks improve consistency but add a control-path hop
+- Provider abstraction helps portability but can hide model-specific capabilities
+- Streaming improves responsiveness but complicates moderation and retry semantics
 
 ## Failure modes
 
-- queue buildup during provider latency spikes
-- hidden tail latency from retrieval or tool dependencies
-- inconsistent retries that duplicate partial outputs
-- poor attribution when users see low quality but traces do not separate retrieval, policy, and model failures
+- Queue buildup during provider latency spikes
+- Hidden tail latency from retrieval or tool dependencies
+- Inconsistent retries that duplicate partial outputs
+- Poor attribution when users see low quality but traces do not separate retrieval, policy, and model failures
 
 ## Security / safety / governance
 
-- scope secrets and provider access by service and tenant
-- redact or classify sensitive inputs before provider calls
-- keep trace storage compliant with retention rules
-- make policy decisions explainable enough that blocked requests can be reviewed
+- Scope secrets and provider access by service and tenant
+- Redact or classify sensitive inputs before provider calls
+- Keep trace storage compliant with retention rules
+- Make policy decisions explainable enough that blocked requests can be reviewed
 
 ## Interview discussion points
 

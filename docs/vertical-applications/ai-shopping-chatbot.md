@@ -8,37 +8,37 @@ The system must help users discover products, compare options, and answer shoppi
 
 ## Functional requirements
 
-- answer product questions using catalog and policy data
-- support conversational product discovery and narrowing
-- explain or compare options using grounded attributes
-- hand off to deterministic checkout or cart flows instead of improvising transactional logic
-- capture feedback on bad recommendations or unsupported answers
+- Answer product questions using catalog and policy data
+- Support conversational product discovery and narrowing
+- Explain or compare options using grounded attributes
+- Hand off to deterministic checkout or cart flows instead of improvising transactional logic
+- Capture feedback on bad recommendations or unsupported answers
 
 ## Non-functional requirements
 
-- low interactive latency
-- high accuracy for price, inventory, and policy-sensitive claims
-- support for rapid catalog updates
-- traceability for recommendation and merchandising decisions
-- clear separation between advice, promotion, and transactional actions
+- Low interactive latency
+- High accuracy for price, inventory, and policy-sensitive claims
+- Support for rapid catalog updates
+- Traceability for recommendation and merchandising decisions
+- Clear separation between advice, promotion, and transactional actions
 
 ## High-level architecture
 
-- chat or shopping assistant interface
-- product catalog retrieval layer
-- recommendation and ranking service
+- Chat or shopping assistant interface
+- Product catalog retrieval layer
+- Recommendation and ranking service
 - LLM gateway for generation and summarization
-- deterministic commerce services for cart, checkout, and account actions
-- feedback and experimentation pipeline
+- Deterministic commerce services for cart, checkout, and account actions
+- Feedback and experimentation pipeline
 
 ## Core components
 
-- catalog ingestion and indexing pipeline
-- attribute-aware retrieval and ranking
-- prompt/context builder that pulls grounded product facts
-- policy checks for pricing, promotions, and unsupported claims
-- transactional service adapters
-- quality and experiment monitoring
+- Catalog ingestion and indexing pipeline
+- Attribute-aware retrieval and ranking
+- Prompt/context builder that pulls grounded product facts
+- Policy checks for pricing, promotions, and unsupported claims
+- Transactional service adapters
+- Quality and experiment monitoring
 
 ## Data flow / request flow
 
@@ -50,31 +50,31 @@ The system must help users discover products, compare options, and answer shoppi
 
 ## Scaling and reliability
 
-- keep catalog freshness independent from model rollout cadence
-- separate recommendation ranking failures from generation failures
-- protect commerce APIs from chat-driven request spikes
-- degrade to search or filtered catalog views when generation is unavailable
+- Keep catalog freshness independent from model rollout cadence
+- Separate recommendation ranking failures from generation failures
+- Protect commerce APIs from chat-driven request spikes
+- Degrade to search or filtered catalog views when generation is unavailable
 
 ## Trade-offs
 
-- richer conversational help improves discovery but can blur into unsupported sales claims
-- tightly grounded answers improve trust but may feel less flexible
-- one assistant simplifies the experience but can overload one interface with very different jobs
-- aggressive personalization may improve conversion but increase privacy and governance burden
+- Richer conversational help improves discovery but can blur into unsupported sales claims
+- Tightly grounded answers improve trust but may feel less flexible
+- One assistant simplifies the experience but can overload one interface with very different jobs
+- Aggressive personalization may improve conversion but increase privacy and governance burden
 
 ## Failure modes
 
-- hallucinated product claims or compatibility guidance
-- stale pricing or inventory in the answer path
-- recommendations that optimize engagement over user fit
-- chat flows that attempt to improvise transactional steps instead of handing off cleanly
+- Hallucinated product claims or compatibility guidance
+- Stale pricing or inventory in the answer path
+- Recommendations that optimize engagement over user fit
+- Chat flows that attempt to improvise transactional steps instead of handing off cleanly
 
 ## Security / safety / governance
 
-- keep transactional actions deterministic and explicitly authorized
-- enforce policy around pricing, regulated products, and promotional claims
-- scope personalization and customer data use to the allowed privacy boundary
-- retain enough traces to investigate unsafe or misleading recommendations
+- Keep transactional actions deterministic and explicitly authorized
+- Enforce policy around pricing, regulated products, and promotional claims
+- Scope personalization and customer data use to the allowed privacy boundary
+- Retain enough traces to investigate unsafe or misleading recommendations
 
 ## Interview discussion points
 

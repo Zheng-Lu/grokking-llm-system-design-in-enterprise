@@ -36,7 +36,7 @@ nav:
       - llm-infrastructure/platform/evaluation-observability-system.md
   - Knowledge Retrieval Systems:
       - knowledge-retrieval-systems/index.md
-      - knowledge-retrieval-systems/internal-chatgpt.md
+      - knowledge-retrieval-systems/rag-system.md
       - knowledge-retrieval-systems/domain-specific-q-and-a-bot.md
       - knowledge-retrieval-systems/notebooklm.md
       - knowledge-retrieval-systems/microsoft-ask-learn.md

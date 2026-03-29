@@ -6,12 +6,12 @@ Most weak LLM system designs start by confusing the model with the system. In pr
 
 For this book, an LLM system usually includes:
 
-- the user or upstream interface
-- context assembly and retrieval
-- model invocation and provider routing
-- post-processing and action handling
-- policy, approval, and safety controls
-- tracing, evaluation, and operational ownership
+- The user or upstream interface
+- Context assembly and retrieval
+- Model invocation and provider routing
+- Post-processing and action handling
+- Policy, approval, and safety controls
+- Tracing, evaluation, and operational ownership
 
 If a proposal only describes prompts and models, the system boundary is too small.
 
@@ -36,10 +36,10 @@ This decomposition is more useful than asking whether a system is "just chat" or
 
 ## Common boundary mistakes
 
-- hiding retrieval and permission logic inside application code
-- letting tool-use decisions bypass the policy layer
-- treating evaluations as an afterthought instead of a release gate
-- assuming one generic assistant can own every workflow equally well
+- Hiding retrieval and permission logic inside application code
+- Letting tool-use decisions bypass the policy layer
+- Treating evaluations as an afterthought instead of a release gate
+- Assuming one generic assistant can own every workflow equally well
 
 ## Reading consequence
 

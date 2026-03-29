@@ -4,21 +4,21 @@ Security, safety, governance, and evaluation are not side topics. They are the c
 
 ## The core control surfaces
 
-- identity and authorization
-- data classification and prompt boundaries
-- model, prompt, and policy versioning
-- tracing, logging, and audit review
-- evaluations and release gates
-- approval workflows for high-risk actions
+- Identity and authorization
+- Data classification and prompt boundaries
+- Model, prompt, and policy versioning
+- Tracing, logging, and audit review
+- Evaluations and release gates
+- Approval workflows for high-risk actions
 
 ## Why these surfaces matter
 
 Without clear control points, teams accumulate the same failure pattern:
 
-- multiple applications reach providers directly
-- prompt and policy changes have no review trail
-- retrieval and tool permissions drift from user permissions
-- incidents are visible only as anecdotal user complaints
+- Multiple applications reach providers directly
+- Prompt and policy changes have no review trail
+- Retrieval and tool permissions drift from user permissions
+- Incidents are visible only as anecdotal user complaints
 
 This makes the system hard to trust even if the user experience looks polished.
 
@@ -36,7 +36,7 @@ Good control surfaces should make safe iteration easier, not only slower. If the
 
 ## Where these surfaces appear in the book
 
-- platform chapters emphasize tracing, routing, and policy enforcement
-- retrieval chapters emphasize permissions, freshness, and grounded answers
-- agent chapters emphasize tool boundaries, approvals, and action auditability
-- model lifecycle chapters emphasize dataset lineage, evaluation, and release control
+- Platform chapters emphasize tracing, routing, and policy enforcement
+- Retrieval chapters emphasize permissions, freshness, and grounded answers
+- Agent chapters emphasize tool boundaries, approvals, and action auditability
+- Model lifecycle chapters emphasize dataset lineage, evaluation, and release control
